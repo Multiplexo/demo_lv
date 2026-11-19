@@ -1,0 +1,23 @@
+00           26-202                                                       000001
+01Brogeb„ude in Holzhybridbauweise       20.06.26                        000002
+02FEN                                                                     000003
+03Muster Immobilien GmbH (Demo)                                           000004
+112                                                                       000005
+12Los 2 Geb„udehlle                                                      000006
+112.01                                                                    000007
+12Fensterelemente                                                         000008
+212.01.0010            00000077000St                                      000009
+25Holz-Alu-Fenster 3-fach verglast                                        000010
+26   Holz-Aluminium-Fenster, Uw ? 0,8 W/mıK, inkl. Montage nach RAL.      000011
+212.01.0020            00000003000St                                      000012
+25Hauseingangstr Holz-Alu, barrierefrei                                  000013
+26   Eingangstr mit Seitenteil, barrierefreie Schwelle, Motorschloss.    000014
+212.01.0030            00000007000St                                      000015
+25Fenstertr Terrassenausgang                                             000016
+26   Fenstertr zweiflgelig mit Stulp.                                   000017
+212.01.0040            00000086000m                                       000018
+25Fensterbank auáen Aluminium                                             000019
+26   Auáenfensterbank aus Aluminium mit Endkappen.                        000020
+312.01                                                                    000021
+312                                                                       000022
+99                                                                   00004000023

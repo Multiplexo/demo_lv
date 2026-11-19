@@ -1,0 +1,20 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02TIS                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+113                                                                       000005
+12Los 3 Ausbau                                                            000006
+113.06                                                                    000007
+12Innentren                                                              000008
+213.06.0010            00000047000St                                      000009
+25Innentr Holz, R”hrenspan, Stahlzarge                                   000010
+26   Innentrelement mit Drckergarnitur.                                 000011
+213.06.0020            00000075000m                                       000012
+25Fensterbank innen Holz                                                  000013
+26   Innenfensterbank aus Multiplex mit Linoleum.                         000014
+213.06.0030            00000004000St                                      000015
+25Garderobenbank mit F„chern                                              000016
+26   Garderobenm”bel nach Zeichnung.                                      000017
+313.06                                                                    000018
+313                                                                       000019
+99                                                                   00003000020

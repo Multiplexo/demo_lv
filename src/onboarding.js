@@ -13,7 +13,7 @@ const KEY = 'onb.entwurf';
 const blank = () => ({
   name: '', slug: '', logo: '', favicon: '', farben: { primaer: '#1f4e79', akzent: '#e8772e' }, login: '',
   sperre: { text: 'nicht mehr anfragen', bis: new Date().getFullYear() + '-12-31' },
-  gewerke: [], alias: {}, ignore: [], kw: [],
+  gewerke: [], alias: {}, ignore: [], kw: [], vorlagen: [], // vorlagen: geladene Vorlagen-IDs (für Stichwörter)
   lieferanten: { datei: '', firms: [], mapping: null },
   pakete: [], // {id, label, lv, datei, codes:{code:n}, corpus:[[text, codes, kat, id, kurz]]}
 });
@@ -165,19 +165,23 @@ function renderGewerke() {
   const nArten = g => arten.filter(a => matchArt(g, a)).length;
   $('#step').innerHTML = `
   <div class="card"><h2>Gewerke</h2>
-    <p class="mut" style="margin-top:0">Je Gewerk ein <b>Kürzel</b> (so beginnen die Dateinamen der Gewerke-Anfragen, z. B. <code>MARK_&lt;LV&gt;.D83</code>), ein Name,
-    Stichwörter, an denen die passenden Einträge der Spalte „Art der Arbeiten“ in der Lieferantenliste erkannt werden, und der übliche Umkreis in km.</p>
+    <p class="mut" style="margin-top:0">Je Gewerk (bzw. Vergabeeinheit) ein <b>Kürzel</b> (so beginnen die Dateinamen der Anfragen, z. B. <code>HOLZ_&lt;LV&gt;.D83</code>), ein Name,
+    Stichwörter, an denen die passenden Einträge der Spalte „Art der Arbeiten“ in der Lieferantenliste erkannt werden, Stichwörter in <b>Abschnittstiteln</b> des LV
+    (z. B. „Holzrahmenbau“, „KG 420“: alle Positionen darunter gehen an dieses Gewerk) und der übliche Umkreis in km.</p>
     <div class="row" style="margin-bottom:10px">
-      <button class="s" id="gVorlage">Vorlage Straßen- und Tiefbau laden (${VORLAGE.gewerke.length} Gewerke)</button>
+      <select id="gVSel">${VORLAGEN.map(v => `<option value="${esc(v.id)}">${esc(v.name)} (${v.gewerke.length} Gewerke)</option>`).join('')}</select>
+      <button class="s" id="gVorlage">Vorlage laden</button>
+      ${K.gewerke.length ? '<button class="s" id="gVorlagePlus" title="Gewerke der Vorlage hinzufügen, vorhandene Kürzel bleiben unverändert">zu den vorhandenen hinzufügen</button>' : ''}
       <button class="s" id="gAdd">+ Gewerk</button>
       <span class="mut small">${K.gewerke.length} Gewerke${arten.length ? ` · ${arten.length} Arten der Arbeiten aus der Lieferantenliste` : ''}</span>
     </div>
     <div class="scroll"><table>
-      <tr><th style="width:110px">Kürzel</th><th style="width:220px">Name</th><th>Stichwörter (mit Komma getrennt)</th><th style="width:80px">Umkreis km</th>${arten.length ? '<th style="width:70px">Arten</th>' : ''}${used.size ? '<th style="width:80px">in Beispielen</th>' : ''}<th style="width:30px"></th></tr>
+      <tr><th style="width:110px">Kürzel</th><th style="width:220px">Name</th><th>Stichwörter Art der Arbeiten (mit Komma)</th><th>Stichwörter in Abschnittstiteln</th><th style="width:80px">Umkreis km</th>${arten.length ? '<th style="width:70px">Arten</th>' : ''}${used.size ? '<th style="width:80px">in Beispielen</th>' : ''}<th style="width:30px"></th></tr>
       ${K.gewerke.map((g, i) => `<tr>
         <td><input type="text" data-i="${i}" data-f="code" value="${esc(g.code)}"></td>
         <td><input type="text" data-i="${i}" data-f="name" value="${esc(g.name)}"></td>
         <td><input type="text" data-i="${i}" data-f="stichwoerter" value="${esc(g.stichwoerter.join(', '))}"></td>
+        <td><input type="text" data-i="${i}" data-f="titel" value="${esc((g.titel || []).join(', '))}"></td>
         <td><input type="number" data-i="${i}" data-f="radius" value="${g.radius}" min="5" max="1000"></td>
         ${arten.length ? `<td><span class="badge ${nArten(g) ? 'ok' : 'warn'}">${nArten(g)}</span></td>` : ''}
         ${used.size ? `<td>${used.get(g.code) ? `<span class="badge ok">${used.get(g.code)}</span>` : ''}</td>` : ''}
@@ -195,7 +199,7 @@ function renderGewerke() {
   $$('#step input[data-i]').forEach(inp => inp.oninput = () => {
     const g = K.gewerke[+inp.dataset.i], f = inp.dataset.f, v = inp.value;
     if (f === 'code') g.code = v.toUpperCase().replace(/[^A-ZÄÖÜ0-9]/g, '');
-    else if (f === 'stichwoerter') g.stichwoerter = v.split(',').map(x => x.trim().toLowerCase()).filter(Boolean);
+    else if (f === 'stichwoerter' || f === 'titel') g[f] = v.split(',').map(x => x.trim().toLowerCase()).filter(Boolean);
     else if (f === 'radius') g.radius = Math.max(5, +v || 100);
     else g.name = v;
     save(); renderSteps();
@@ -204,12 +208,24 @@ function renderGewerke() {
   $$('[data-del]').forEach(b => b.onclick = () => { K.gewerke.splice(+b.dataset.del, 1); save(); renderGewerke(); });
   $$('[data-adel]').forEach(b => b.onclick = () => { delete K.alias[b.dataset.adel]; save(); renderGewerke(); });
   $('#aAdd').onclick = () => { const a = $('#aFrom').value.trim().toUpperCase(); if (a && $('#aTo').value) { K.alias[a] = $('#aTo').value; save(); renderGewerke(); } };
-  $('#gAdd').onclick = () => { K.gewerke.push({ code: 'NEU' + (K.gewerke.length + 1), name: '', stichwoerter: [], radius: 100 }); save(); renderGewerke(); };
+  $('#gAdd').onclick = () => { K.gewerke.push({ code: 'NEU' + (K.gewerke.length + 1), name: '', stichwoerter: [], titel: [], radius: 100 }); save(); renderGewerke(); };
+  const vorlage = () => VORLAGEN.find(v => v.id === $('#gVSel').value);
   $('#gVorlage').onclick = () => {
-    if (K.gewerke.length && !confirm('Vorhandene Gewerke durch die Vorlage ersetzen?')) return;
-    K.gewerke = JSON.parse(JSON.stringify(VORLAGE.gewerke)); K.alias = { ...VORLAGE.alias };
-    if (!K.kw.length) K.kw = JSON.parse(JSON.stringify(VORLAGE.kw));
+    const V = vorlage();
+    if (K.gewerke.length && !confirm(`Vorhandene Gewerke durch die Vorlage „${V.name}“ ersetzen?`)) return;
+    K.gewerke = JSON.parse(JSON.stringify(V.gewerke)); K.alias = { ...V.alias }; K.vorlagen = [V.id];
+    if (!K.kw.length) K.kw = JSON.parse(JSON.stringify(V.kw));
     save(); renderGewerke();
+  };
+  // Vorlagen kombinieren (z. B. GU mit eigener Tiefbau-Sparte): nur neue Kürzel kommen dazu
+  if ($('#gVorlagePlus')) $('#gVorlagePlus').onclick = () => {
+    const V = vorlage(), have = new Set(gwCodes());
+    const neu = V.gewerke.filter(g => !have.has(g.code));
+    K.gewerke.push(...JSON.parse(JSON.stringify(neu)));
+    for (const [a, c] of Object.entries(V.alias)) if (!(a in K.alias) && !have.has(a)) K.alias[a] = c;
+    if (!K.vorlagen.includes(V.id)) K.vorlagen.push(V.id);
+    save(); renderGewerke();
+    alert(`${neu.length} Gewerke hinzugefügt` + (V.gewerke.length > neu.length ? `, ${V.gewerke.length - neu.length} Kürzel gab es schon` : '') + '.');
   };
   nav();
 }
@@ -357,7 +373,7 @@ function renderPakete() {
   $('#step').innerHTML = `
   <div class="card"><h2>Beispiel-Ausschreibungen</h2>
     <p class="mut" style="margin-top:0">Abgeschlossene Vergabepakete, die schon von Hand in Gewerke zerlegt wurden: je Paket ein Ordner mit dem Gesamt-LV
-    (<code>.D83</code>, <code>.P83</code> oder <code>.X83</code>) und den Gewerke-Dateien <code>KÜRZEL_&lt;LV-Name&gt;.D83</code>. Daraus lernt die App, welche Position zu welchem Gewerk gehört.
+    (GAEB 90 <code>.D83</code>/<code>.P83</code>, GAEB XML <code>.X83</code>, auch Phasen 81 bis 86) und den Gewerke-Dateien <code>KÜRZEL_&lt;LV-Name&gt;.D83</code>. Daraus lernt die App, welche Position zu welchem Gewerk gehört.
     Empfohlen sind 5 bis 10 Pakete. Mehrere Paket-Ordner können auf einmal abgelegt werden.</p>
     <div class="drop" id="pDrop">Paket-Ordner hier ablegen</div>
     <div class="row" style="margin-top:8px"><label class="s">Ordner wählen<input type="file" id="pIn" webkitdirectory multiple hidden></label><span class="mut small">Ein Ordner mit Unterordnern je Paket geht auch.</span></div>
@@ -386,7 +402,7 @@ function renderPakete() {
   $$('[data-pdel]').forEach(b => b.onclick = () => { K.pakete.splice(+b.dataset.pdel, 1); save(); renderPakete(); });
   $$('[data-code]').forEach(s => s.onchange = () => {
     const c = s.dataset.code, v = s.value;
-    if (v === 'neu') K.gewerke.push({ code: c, name: c, stichwoerter: [], radius: 100 });
+    if (v === 'neu') K.gewerke.push({ code: c, name: c, stichwoerter: [], titel: [], radius: 100 });
     else if (v === 'ignore') K.ignore.push(c);
     else if (v.startsWith('=')) K.alias[c] = v.slice(1);
     save(); renderPakete();
@@ -406,9 +422,11 @@ async function droppedFiles(dt) {
   for (const en of entries) await walk(en);
   return out;
 }
+// GAEB 90 (.D8x/.P8x) und GAEB XML (.X8x), Phasen 81 (Leistungsbeschreibung) bis 86 (Auftrag)
+const LV_EXT = /\.[dpx]8[1-6]$/i;
 // wie in der App: das Gesamt-LV ist die Datei, auf die sich die Gewerke-Dateien (KÜRZEL_<name>) beziehen
 function pickMain(files) {
-  const lvs = files.filter(f => /\.(d83|x83|p83)$/i.test(f.name));
+  const lvs = files.filter(f => LV_EXT.test(f.name));
   if (lvs.length < 2) return lvs[0];
   const ref = lvs.find(f => lvs.some(g => g !== f && g.name.endsWith('_' + f.name)));
   if (ref) return ref;
@@ -430,12 +448,12 @@ async function addPakete(list) {
   const msg = (t, cls = '') => { $('#pMsg').className = 'msg ' + cls; $('#pMsg').textContent = t; };
   const dirs = new Map();
   for (const { file, path } of list) {
-    if (!/\.(d83|x83|p83)$/i.test(file.name)) continue;
+    if (!LV_EXT.test(file.name)) continue;
     const d = path.includes('/') ? path.slice(0, path.lastIndexOf('/')) : '(ohne Ordner)';
     if (!dirs.has(d)) dirs.set(d, []);
     dirs.get(d).push(file);
   }
-  if (!dirs.size) return msg('Keine LV-Dateien (.D83, .P83, .X83) gefunden.', 'err');
+  if (!dirs.size) return msg('Keine LV-Dateien (GAEB .D81 bis .D86, .P8x oder .X8x) gefunden.', 'err');
   const fehler = [];
   let neu = 0;
   for (const [dir, files] of dirs) {
@@ -456,7 +474,8 @@ async function addPakete(list) {
       }
       let id = dir.split('/').pop() || main.name;
       while (K.pakete.some(p => p.id === id)) id += '_2';
-      const corpus = lv.items.map(it => [(it.kurztext + ' ' + it.langtext.slice(0, 200)).trim(), [...(lab.get(key(it)) || [])].sort(), it.kat || '', id, it.kurztext]);
+      // 6. Feld: Abschnittstitel von außen nach innen (für Titel-Regeln und Trefferquote)
+      const corpus = lv.items.map(it => [(it.kurztext + ' ' + it.langtext.slice(0, 200)).trim(), [...(lab.get(key(it)) || [])].sort(), it.kat || '', id, it.kurztext, ENGINE.titlesOf(it).reverse()]);
       K.pakete.push({ id, label: [id, lv.info.bezeichnung].filter(Boolean).join(' · ').slice(0, 80), datei: main.name, codes, corpus });
       neu++;
     } catch (e) { fehler.push(`${dir}: ${e.message}`); }
@@ -466,15 +485,22 @@ async function addPakete(list) {
 }
 
 // ------------------------------------------------------------ 5. Stichwörter
+// Stichwörter der geladenen Vorlagen (ohne geladene Vorlage: die erste), nur für vorhandene Gewerke
+function kwVorlage() {
+  const vs = VORLAGEN.filter(v => K.vorlagen.includes(v.id));
+  return (vs.length ? vs : VORLAGEN.slice(0, 1)).flatMap(v => v.kw).filter(r => !K.gewerke.length || r.codes.every(known));
+}
 function renderKw() {
   $('#step').innerHTML = `
   <div class="card"><h2>Stichwörter</h2>
     <p class="mut" style="margin-top:0">Steht ein Stichwort im Kurztext einer Position, schlägt die App das Gewerk direkt vor (vor dem Vergleich mit den Beispielen).
-    Groß-/Kleinschreibung egal, Wortteile reichen (z. B. „absperr“). Sinnvoll für eindeutige Begriffe, die selten vorkommen.</p>
-    <div class="row" style="margin-bottom:10px"><button class="s" id="kVorlage">Vorlage laden (${VORLAGE.kw.length} Stichwörter)</button><button class="s" id="kAdd">+ Stichwort</button><span class="mut small">${K.kw.length} Stichwörter</span></div>
-    <div class="scroll"><table><tr><th>Stichwort im Kurztext</th><th>Gewerk-Kürzel (mehrere mit Komma)</th><th style="width:30px"></th></tr>
+    Groß-/Kleinschreibung egal, Wortteile reichen (z. B. „absperr“). Sinnvoll für eindeutige Begriffe, die selten vorkommen.
+    <b>Schnittstelle</b> (z. B. „Kernbohrung“, „Abschottung“, „Gerüst“): Das Gewerk kommt zu dem des Abschnitts dazu, die Position wird in der App zur Prüfung markiert.</p>
+    <div class="row" style="margin-bottom:10px"><button class="s" id="kVorlage">Stichwörter der Vorlage laden (${kwVorlage().length})</button><button class="s" id="kAdd">+ Stichwort</button><span class="mut small">${K.kw.length} Stichwörter</span></div>
+    <div class="scroll"><table><tr><th>Stichwort im Kurztext</th><th>Gewerk-Kürzel (mehrere mit Komma)</th><th style="width:100px">Schnittstelle</th><th style="width:30px"></th></tr>
     ${K.kw.map((r, i) => { const bad = r.codes.filter(c => !known(c)); return `<tr><td><input type="text" data-k="${i}" data-f="wort" value="${esc(r.wort)}"></td>
       <td><input type="text" data-k="${i}" data-f="codes" value="${esc(r.codes.join(', '))}" ${bad.length ? 'style="border-color:var(--bad)" title="unbekannt: ' + esc(bad.join(', ')) + '"' : ''}></td>
+      <td style="text-align:center"><input type="checkbox" data-ks="${i}" ${r.schnitt ? 'checked' : ''}></td>
       <td><button class="x" data-kdel="${i}">×</button></td></tr>`; }).join('')}</table></div>
   </div>`;
   $$('[data-k]').forEach(inp => inp.oninput = () => {
@@ -483,11 +509,12 @@ function renderKw() {
     save(); renderSteps();
   });
   $$('[data-f="codes"]').forEach(inp => inp.onchange = () => renderKw());
+  $$('[data-ks]').forEach(cb => cb.onchange = () => { const r = K.kw[+cb.dataset.ks]; if (cb.checked) r.schnitt = true; else delete r.schnitt; save(); });
   $$('[data-kdel]').forEach(b => b.onclick = () => { K.kw.splice(+b.dataset.kdel, 1); save(); renderKw(); });
   $('#kAdd').onclick = () => { K.kw.push({ wort: '', codes: [] }); save(); renderKw(); };
   $('#kVorlage').onclick = () => {
     const have = new Set(K.kw.map(r => r.wort.toLowerCase()));
-    K.kw.push(...VORLAGE.kw.filter(r => !have.has(r.wort.toLowerCase())).map(r => ({ ...r, codes: [...r.codes] })));
+    K.kw.push(...kwVorlage().filter(r => !have.has(r.wort.toLowerCase())).map(r => ({ ...r, codes: [...r.codes] })));
     save(); renderKw();
   };
   nav();
@@ -495,19 +522,20 @@ function renderKw() {
 
 // ------------------------------------------------------------ 6. Prüfen & erzeugen
 function corpusAll() {
-  return K.pakete.flatMap(p => p.corpus.map(([t, cs, kat, src, kurz]) => [t, uniq(cs.filter(c => !K.ignore.includes(c)).map(normCode)).sort(), kat, src, kurz]));
+  return K.pakete.flatMap(p => p.corpus.map(([t, cs, kat, src, kurz, titel]) => [t, uniq(cs.filter(c => !K.ignore.includes(c)).map(normCode)).sort(), kat, src, kurz, titel || []]));
 }
 // Trefferquote: jedes Paket wird mit den Regeln und den übrigen Paketen vorgeschlagen und mit der echten Zuordnung verglichen
 function quality() {
   if (K.pakete.length < 2) return null;
-  const all = corpusAll().map(([text, codes, kat, src, kurz]) => ({ text, codes, kat, src, kurz }));
+  const all = corpusAll().map(([text, codes, kat, src, kurz, titel]) => ({ text, codes, kat, src, kurz, titel }));
   const kw = K.kw.filter(r => r.wort.trim() && r.codes.length);
+  const tt = ENGINE.titelRulesFrom(Object.fromEntries(K.gewerke.map(g => [g.code, g])));
   const res = K.pakete.map(p => {
     const train = all.filter(e => e.src !== p.id), test = all.filter(e => e.src === p.id);
-    const sug = ENGINE.make(train, kw, ENGINE.learnKatRules(train));
+    const sug = ENGINE.make(train, kw, ENGINE.learnKatRules(train), tt);
     let ok = 0;
     for (const e of test) {
-      const r = sug({ kurztext: e.kurz, langtext: e.text.slice(e.kurz.length).trim(), kat: e.kat });
+      const r = sug({ kurztext: e.kurz, langtext: e.text.slice(e.kurz.length).trim(), kat: e.kat, titel: e.titel });
       const got = uniq(r.codes.map(normCode).filter(c => gwCodes().includes(c))).sort().join('+');
       if (got === e.codes.filter(c => gwCodes().includes(c)).join('+')) ok++;
     }
@@ -523,11 +551,11 @@ function exportData() {
   F.forEach(f => { if (f.ort && f.geo) { cnt[f.ort] = cnt[f.ort] || {}; cnt[f.ort][f.plz] = (cnt[f.ort][f.plz] || 0) + 1; } });
   for (const [o, c] of Object.entries(cnt)) orte[o] = Object.entries(c).sort((a, b) => b[1] - a[1])[0][0];
   const gewerke = {};
-  for (const g of K.gewerke) gewerke[g.code] = { name: g.name || g.code, arten: arten.filter(a => matchArt(g, a)), radius: g.radius };
+  for (const g of K.gewerke) gewerke[g.code] = { name: g.name || g.code, arten: arten.filter(a => matchArt(g, a)), radius: g.radius, titel: g.titel || [] };
   const kunde = {
     name: K.name, slug: K.slug, login: K.login || K.slug, farben: K.farben, logo: K.logo, favicon: K.favicon,
     sperre: K.sperre, pakete: Object.fromEntries(K.pakete.map(p => [p.id, p.label])),
-    onboarding: { version: 1, stand: new Date().toISOString().slice(0, 10), gewerke: K.gewerke, alias: K.alias, ignore: K.ignore,
+    onboarding: { version: 1, stand: new Date().toISOString().slice(0, 10), vorlagen: K.vorlagen, gewerke: K.gewerke, alias: K.alias, ignore: K.ignore,
       lieferantenDatei: K.lieferanten.datei, pakete: K.pakete.map(p => ({ id: p.id, label: p.label, datei: p.datei, codes: p.codes })) },
   };
   const data = { corpus: corpusAll(), firms: F, orte, arten, gewerke, alias: K.alias };
@@ -579,7 +607,7 @@ function renderCheck() {
       ${item(K.gewerke.length > 0, `${K.gewerke.length} Gewerke`)}
       ${item(K.lieferanten.firms.length > 0, `${K.lieferanten.firms.length} Firmen aus der Lieferantenliste${st.ohneGeo ? `, ${st.ohneGeo} ohne gültige PLZ (erscheinen ohne Entfernung)` : ''}`)}
       ${K.lieferanten.firms.length ? item(!st.frei.length, st.frei.length ? `${st.frei.length} Arten der Arbeiten keinem Gewerk zugeordnet (Schritt 3)` : 'Alle Arten der Arbeiten einem Gewerk zugeordnet', st.frei.length ? 'warn' : 'ok') : ''}
-      ${item(K.pakete.length > 0, K.pakete.length ? `${K.pakete.length} Beispiel-Ausschreibungen mit ${K.pakete.reduce((s, p) => s + p.corpus.length, 0)} Positionen` : 'Keine Beispiel-Ausschreibungen: Vorschläge nur über Stichwörter', K.pakete.length ? 'ok' : 'warn')}
+      ${item(K.pakete.length > 0, K.pakete.length ? `${K.pakete.length} Beispiel-Ausschreibungen mit ${K.pakete.reduce((s, p) => s + p.corpus.length, 0)} Positionen` : 'Keine Beispiel-Ausschreibungen: Vorschläge nur über Titel-Regeln und Stichwörter', K.pakete.length ? 'ok' : 'warn')}
       ${offen.length ? item(false, `Unbekannte Kürzel in Beispielen: ${offen.map(esc).join(', ')} (Schritt 4)`, 'warn') : ''}
       ${item(K.kw.length > 0, `${K.kw.length} Stichwörter${kwBad.length ? `, davon ${kwBad.length} mit unbekanntem Gewerk (Schritt 5)` : ''}`, K.kw.length && !kwBad.length ? 'ok' : 'warn')}
     </ul>
@@ -633,7 +661,8 @@ async function openPackage(file) {
     K = Object.assign(blank(), {
       name: kunde.name, slug: kunde.slug, logo: kunde.logo || '', favicon: kunde.favicon || '', farben: kunde.farben || blank().farben,
       login: kunde.login || '', sperre: kunde.sperre || blank().sperre,
-      gewerke: o.gewerke || Object.entries(data.gewerke).map(([code, g]) => ({ code, name: g.name, stichwoerter: [], radius: g.radius })),
+      gewerke: o.gewerke || Object.entries(data.gewerke).map(([code, g]) => ({ code, name: g.name, stichwoerter: [], titel: g.titel || [], radius: g.radius })),
+      vorlagen: o.vorlagen || [],
       alias: o.alias || data.alias || {}, ignore: o.ignore || [], kw: kw || [],
       lieferanten: { datei: o.lieferantenDatei || '', firms: data.firms || [], mapping: null },
       pakete: [...byPkg].map(([id, corpus]) => { const m = (o.pakete || []).find(p => p.id === id) || {};

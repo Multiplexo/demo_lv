@@ -1,0 +1,30 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02HOLZ                                                                    000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.05                                                                    000007
+12Holztafelbau WÑnde und Decken                                           000008
+211.05.0010            00001249000m2                                      000009
+25Au·enwandelement Holzrahmen, gedÑmmt                                    000010
+26   Holzrahmen-Au·enwand mit ZellulosedÑmmung 240 mm, OSB innen,         000011
+26   Holzfaserplatte au·en, vorgefertigt.                                 000012
+211.05.0020            00000533000m2                                      000013
+25Innenwandelement Holzrahmen tragend                                     000014
+26   Tragende Innenwand in Holzrahmenbauweise, beidseitig beplankt.       000015
+211.05.0030            00000508000m2                                      000016
+25Brettsperrholzdecke 200 mm                                              000017
+26   Deckenelemente aus Brettsperrholz liefern und montieren.             000018
+211.05.0040            00000008000m3                                      000019
+25BrettschichtholztrÑger GL24h                                            000020
+26   UnterzÅge aus Brettschichtholz liefern und montieren.                000021
+211.05.0050            00000735000m2                                      000022
+25Dachelement Holzrahmen mit DÑmmung                                      000023
+26   Dachelemente in Holzrahmenbauweise, DÑmmung 300 mm.                  000024
+211.05.0060            00000012000Tag                                     000025
+25Montage mit Autokran                                                    000026
+26   Montage der Elemente inkl. Kranstellung und Montagepersonal.         000027
+311.05                                                                    000028
+311                                                                       000029
+99                                                                   00006000030

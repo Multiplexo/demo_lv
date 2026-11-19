@@ -197,7 +197,8 @@ let KW = store.get('kw', null) || KW_SEED;
 let KAT = store.get('kat', null) || ENGINE.learnKatRules(CORPUS);
 let LEARNED = store.get('beispiele', []);
 let suggest;
-function rebuild() { suggest = ENGINE.make(CORPUS.concat(LEARNED), KW, KAT); }
+// Titel-Regeln kommen aus den Gewerken (Stichwörter in Abschnittstiteln, im Onboarding gepflegt)
+function rebuild() { suggest = ENGINE.make(CORPUS.concat(LEARNED), KW, KAT, ENGINE.titelRulesFrom(GW)); }
 rebuild();
 
 // ------------------------------------------------------------ Zustand
@@ -212,6 +213,8 @@ const S = {
   site: null,            // {label, lat, lng}
   siteText: '',
   firms: {},             // kürzel -> Set(firm id)
+  docs: [],              // PDFs aus dem Ausschreibungsordner [{file, on}], on = als Anlage mitschicken
+  vorgaben: {},          // '*' = für alle Anfragen, sonst je Kürzel: Projektvorgaben an die Nachunternehmer
   openGw: null,
 };
 
@@ -233,11 +236,11 @@ function foot(html) { $('#foot').innerHTML = html; $('#foot').hidden = !html; }
 function renderLoad() {
   $('#step').innerHTML = `
   <div class="card"><h2>Ausschreibung einlesen</h2>
-    <p class="mut">Am besten den ganzen Ausschreibungsordner hierher ziehen. Der PoC nimmt sich daraus das Gesamt-LV (.D83 oder .X83) und liest die Baustelle aus der „Aufforderung zur Angebotsabgabe“ (PDF). Eine einzelne LV-Datei geht auch. Alles bleibt auf diesem Rechner.</p>
+    <p class="mut">Am besten den ganzen Ausschreibungsordner hierher ziehen. Der PoC nimmt sich daraus das Gesamt-LV (GAEB .D83 oder .X83, auch Phasen 81 bis 86), liest die Baustelle aus der „Aufforderung zur Angebotsabgabe“ oder einer anderen Vergabe-PDF und merkt sich Formulare wie Tariftreue- oder Eigenerklärungen als Anlagen für die Anfragen. Eine einzelne LV-Datei geht auch. Alles bleibt auf diesem Rechner.</p>
     <div class="drop" id="drop">Ordner oder LV-Datei hier ablegen</div>
     <div class="row" style="margin-top:8px">
       <label class="s" style="cursor:pointer">Ordner wählen<input type="file" id="dirIn" webkitdirectory multiple hidden></label>
-      <label class="s" style="cursor:pointer">Einzelne LV-Datei wählen<input type="file" id="fileIn" accept=".d83,.D83,.p83,.P83,.x83,.X83" hidden></label>
+      <label class="s" style="cursor:pointer">Einzelne LV-Datei wählen<input type="file" id="fileIn" accept=".d81,.d82,.d83,.d84,.d86,.p81,.p82,.p83,.p84,.p86,.x81,.x82,.x83,.x84,.x86" hidden></label>
     </div>
     <div id="loadMsg" class="hint" style="margin-top:8px"></div>
   </div>
@@ -267,8 +270,12 @@ async function droppedFiles(dt) {
   return out;
 }
 // Gesamt-LV im Ordner finden: die Datei, auf die sich die Gewerke-Dateien (KÜRZEL_<name>) beziehen
+// GAEB 90 (.D8x/.P8x) und GAEB XML (.X8x), Phasen 81 (Leistungsbeschreibung) bis 86 (Auftrag)
+const LV_EXT = /\.[dpx]8[1-6]$/i;
+// Formulare, die meist an die Nachunternehmer weitergereicht werden müssen (Tariftreue, Eigenerklärungen …)
+const PFLICHT = /tariftreue|mindestlohn|mindestarbeit|eigenerkl|verpflichtungserkl|nachunternehmer|\b[bez]vb\b|vertragsbeding|formblatt|formular/i;
 function pickMain(files) {
-  const lvs = files.filter(f => /\.(d83|x83|p83)$/i.test(f.name));
+  const lvs = files.filter(f => LV_EXT.test(f.name));
   if (lvs.length < 2) return lvs[0];
   const ref = lvs.find(f => lvs.some(g => g !== f && g.name.endsWith('_' + f.name)));
   if (ref) return ref;
@@ -279,7 +286,7 @@ function pickMain(files) {
 async function loadFiles(files) {
   const msg = t => $('#loadMsg').textContent = t;
   const main = pickMain(files);
-  if (!main) return msg('Keine LV-Datei (.D83 oder .X83) gefunden.');
+  if (!main) return msg('Keine LV-Datei (GAEB .D8x, .P8x oder .X8x) gefunden.');
   try {
     const bytes = new Uint8Array(await main.arrayBuffer());
     // GAEB-XML beginnt mit '<' (ggf. nach BOM/Leerzeichen), GAEB 90 mit Satzart-Ziffern
@@ -290,15 +297,21 @@ async function loadFiles(files) {
     S.firms = {};
     clearAssign();
     S.siteText = guessSite(lv, main.name); S.siteSrc = 'dem LV';
-    S.site = null;
+    S.site = null; S.vorgaben = {};
   } catch (e) { return msg(`${main.name} konnte nicht gelesen werden: ${e.message}`); }
-  const auf = files.filter(f => /aufforderung/i.test(f.name) && /\.pdf$/i.test(f.name)).sort((x, y) => x.size - y.size)[0];
-  if (auf) {
-    msg(`${main.name} gelesen, lese Baustelle aus ${auf.name} …`);
+  const pdfs = files.filter(f => /\.pdf$/i.test(f.name));
+  S.docs = pdfs.map(f => ({ file: f, on: PFLICHT.test(f.name.normalize('NFC')) }));
+  // Baustelle: die Aufforderung zählt immer; sonst andere kleine PDFs, wenn das LV keinen Ort liefert
+  const auf = pdfs.filter(f => /aufforderung/i.test(f.name)).sort((x, y) => x.size - y.size)[0];
+  const weak = !/,|\d{5}/.test(S.siteText);
+  const cands = auf ? [auf] : weak ? pdfs.filter(f => f.size < 3e6 && !PFLICHT.test(f.name)).sort((x, y) => x.size - y.size).slice(0, 4) : [];
+  for (const f of cands) {
+    msg(`${main.name} gelesen, lese Baustelle aus ${f.name} …`);
     try {
-      const s = PDFSITE.site(await PDFSITE.text(auf), agOrt(S.lv.info));
-      if (s) { S.siteText = s; S.siteSrc = auf.name; }
-    } catch (e) { console.warn('Aufforderung nicht lesbar', e); }
+      const t = await PDFSITE.text(f);
+      const s = PDFSITE.site(t, agOrt(S.lv.info) || (/\bStadt\s+([A-ZÄÖÜ][a-zäöüß-]+)/.exec(t) || [])[1] || '');
+      if (s) { S.siteText = s; S.siteSrc = f.name; break; }
+    } catch (e) { console.warn('PDF nicht lesbar', f.name, e); }
   }
   go(1);
 }
@@ -357,10 +370,12 @@ function gwCell(it, opts, toggle) {
     ? `<span class="chip ${S.pick.has(x + '|' + it.oz) ? '' : 'off'}" data-tgl="${x}|${esc(it.oz)}" title="Klick: in dieser Anfrage mitschicken ja/nein">${esc(gwName(x))}<b data-rm="${x}|${esc(it.oz)}" title="aus Gewerk entfernen">×</b></span>`
     : `<span class="chip" title="Kürzel ${x}">${esc(gwName(x))}<b data-rm="${x}|${esc(it.oz)}" title="aus Gewerk entfernen">×</b></span>`;
   return `${cs.map(chip).join('')}${!cs.length ? '<span class="badge warn">nicht zugeordnet</span> ' : ''}
-    ${r.sure === false ? '<span class="badge warn">unsicher</span>' : ''}
+    ${r.schnitt ? '<span class="badge warn" title="Position betrifft mehrere Gewerke">Schnittstelle prüfen</span>' : r.sure === false ? '<span class="badge warn">unsicher</span>' : ''}
     <select data-add="${esc(it.oz)}"><option value="">+ Gewerk / Eigenleistung</option><option value="${EIGEN}">Eigenleistung (selbst ausführen)</option>${opts}</select>
     ${whyText(r) ? `<div class="why">${esc(whyText(r))}</div>` : ''}`;
 }
+let SECS = []; // Abschnitte der LV-Ansicht, Index = data-sec
+const secItems = g => g.children.flatMap(c => c.records ? [c] : secItems(c));
 function lvRows(group, f, opts, out) {
   for (const c of group.children) {
     if (c.records) {
@@ -372,7 +387,10 @@ function lvRows(group, f, opts, out) {
     } else {
       const sub = [];
       lvRows(c, f, opts, sub);
-      if (sub.length) out.push(`<tr class="lvh"><td colspan="4">${esc(c.title || 'Abschnitt')}</td></tr>`, ...sub);
+      if (!sub.length) continue;
+      const si = SECS.push(c) - 1;
+      out.push(`<tr class="lvh"><td colspan="3">${esc(c.title || 'Abschnitt')}</td><td><select data-sec="${si}" title="alle Positionen dieses Abschnitts einem Gewerk zuordnen, ersetzt die bisherige Zuordnung">
+        <option value="">ganzer Abschnitt an …</option><option value="${EIGEN}">Eigenleistung</option>${opts}</select></td></tr>`, ...sub);
     }
   }
   return out;
@@ -391,6 +409,7 @@ function renderGewerke() {
     </div>
     <p class="mut" style="margin:8px 0 0">„Intelligente Zuordnung“ schlägt für alle noch nicht zugeordneten Positionen Gewerke vor, auf Basis der bisherigen Anfragen des Kunden. Danach lässt sich alles von Hand korrigieren. <span class="badge warn">unsicher</span> heißt: kaum ähnliche Positionen gefunden. Eigenleistung heißt: wird selbst ausgeführt und nicht angefragt. Über „+ Gewerk / Eigenleistung“ lässt sich das bei jeder Position ändern. ${S.view === 'gw' ? 'Häkchen = Position wird in dieser Anfrage mitgeschickt.' : 'Klick auf ein Gewerk = in dieser Anfrage mitschicken ja/nein (durchgestrichen = nein).'}</p></div>`;
   if (S.view === 'lv') {
+    SECS = [];
     html += `<div class="card"><table><tr><th>OZ</th><th>Leistung</th><th>Menge</th><th>Gewerke</th></tr>${lvRows(S.lv.root, f, opts, []).join('')}</table></div>`;
   }
   for (const [c, its] of S.view === 'gw' ? groups() : []) {
@@ -424,6 +443,15 @@ function renderGewerke() {
   $('#smart').onclick = () => { applySuggestions(true); renderGewerke(); };
   $('#vGw').onclick = () => { S.view = 'gw'; renderGewerke(); };
   $('#vLv').onclick = () => { S.view = 'lv'; renderGewerke(); };
+  document.querySelectorAll('[data-sec]').forEach(el => el.onchange = () => {
+    const c = el.value; if (!c) return;
+    for (const it of secItems(SECS[+el.dataset.sec])) {
+      S.assign.get(it.oz).forEach(x => S.pick.delete(x + '|' + it.oz));
+      S.assign.set(it.oz, new Set([c])); S.reason.delete(it.oz);
+      if (c !== EIGEN) S.pick.add(c + '|' + it.oz);
+    }
+    renderGewerke();
+  });
   document.querySelectorAll('[data-tgl]').forEach(el => el.onclick = e => {
     if (e.target.tagName === 'B') return;
     const k = el.dataset.tgl; S.pick.has(k) ? S.pick.delete(k) : S.pick.add(k); renderGewerke();
@@ -606,6 +634,16 @@ function anfrageFiles() {
   });
 }
 function firmsOf(c) { return DATA.firms.filter(f => (S.firms[c] || new Set()).has(f.id)); }
+// Vorgaben für eine Anfrage: erst die für alle, dann die des Gewerks
+const vorgabeText = c => [S.vorgaben['*'], S.vorgaben[c]].map(t => (t || '').trim()).filter(Boolean).join('\n\n');
+const anlagen = () => S.docs.filter(d => d.on);
+function mailBody(x) {
+  const v = vorgabeText(x.c), a = anlagen();
+  return [`Sehr geehrte Damen und Herren,`, `für das Bauvorhaben ${S.lv.info.bezeichnung || S.lv.info.lv} bitten wir um Ihr Angebot für ${gwName(x.c)}. Das Leistungsverzeichnis (${x.name}) liegt bei.`,
+    v ? 'Bitte beachten Sie folgende Projektvorgaben:\n' + v : '',
+    a.length ? 'Bitte füllen Sie die beigefügten Anlagen aus und senden Sie sie mit Ihrem Angebot zurück:\n' + a.map(d => '- ' + d.file.name).join('\n') : '',
+    'Mit freundlichen Grüßen\n' + KUNDE.name].filter(Boolean).join('\n\n');
+}
 function renderExport() {
   const files = anfrageFiles();
   $('#step').innerHTML = `
@@ -618,16 +656,36 @@ function renderExport() {
       const subj = encodeURIComponent(`Anfrage ${gwName(x.c)} – ${S.lv.info.lv} ${S.lv.info.bezeichnung}`);
       return `<tr><td>${esc(gwName(x.c))}</td><td class="oz">${esc(x.name)}</td><td>${x.n}</td>
         <td>${fs.length ? fs.map(f => esc(f.firma)).join('<br>') : '<span class="badge warn">keine</span>'}</td>
-        <td>${h.map(t => `<div class="hint">${esc(t)}</div>`).join('')}</td>
-        <td>${mails.length ? `<a href="mailto:?bcc=${encodeURIComponent(mails.join(','))}&subject=${subj}">E-Mail öffnen</a>` : ''}</td></tr>`;
+        <td>${h.map(t => `<div class="hint">${esc(t)}</div>`).join('')}${vorgabeText(x.c) ? '<div class="lt">mit Projektvorgaben</div>' : ''}${anlagen().length ? `<div class="lt">${anlagen().length} Anlagen</div>` : ''}</td>
+        <td>${mails.length ? `<a href="mailto:?bcc=${encodeURIComponent(mails.join(','))}&subject=${subj}&body=${encodeURIComponent(mailBody(x))}">E-Mail öffnen</a>` : ''}</td></tr>`;
     }).join('')}</table>
     <p class="mut">Beim Herunterladen merkt sich das Tool die Zuordnung dieses LV als Beispiel für künftige Vorschläge (siehe Reiter „Regeln“).</p>
-    <p class="mut">Die E-Mail öffnet sich im Mailprogramm mit allen Anbietern in BCC. Die D83-Datei muss dort angehängt werden. Es wird nichts automatisch verschickt.</p>
+    <p class="mut">Die E-Mail öffnet sich im Mailprogramm mit allen Anbietern in BCC, mit Projektvorgaben und Liste der Anlagen im Text. LV-Datei und Anlagen müssen dort angehängt werden. Es wird nichts automatisch verschickt.</p>
+  </div>
+  <div class="card"><h2>Projektvorgaben an die Nachunternehmer</h2>
+    <p class="mut" style="margin-top:0">Vorgaben aus der Ausschreibung, die die Nachunternehmer einhalten müssen, z. B. aus der Bewertungsmatrix (Energiestandard, Bauzeit, Nachweise). Sie stehen in der E-Mail und als Textdatei im ZIP.</p>
+    <label class="f">Für alle Anfragen<textarea id="vgAll" placeholder="z. B. Bauzeit insgesamt höchstens 10 Monate, Termine laut Rahmenterminplan">${esc(S.vorgaben['*'] || '')}</textarea></label>
+    <details ${files.some(x => S.vorgaben[x.c]) ? 'open' : ''} style="margin-top:10px"><summary class="mut">Zusätzlich je Gewerk</summary>
+      ${files.map(x => `<label class="f" style="margin-top:8px">${esc(gwName(x.c))}<textarea data-vg="${x.c}" style="min-height:44px">${esc(S.vorgaben[x.c] || '')}</textarea></label>`).join('')}
+    </details>
+  </div>
+  <div class="card"><h2>Anlagen für alle Anfragen</h2>
+    <p class="mut" style="margin-top:0">PDFs aus dem Ausschreibungsordner. Formulare wie Tariftreue- oder Eigenerklärungen sind vorausgewählt, weil der Auftragnehmer die Pflichten an seine Nachunternehmer weitergeben muss.</p>
+    ${S.docs.length ? `<table>${S.docs.map((d, i) => `<tr><td style="width:30px"><input type="checkbox" data-doc="${i}" ${d.on ? 'checked' : ''}></td><td>${esc(d.file.name)}</td><td class="mut" style="white-space:nowrap">${Math.max(1, Math.round(d.file.size / 1024))} KB</td></tr>`).join('')}</table>` : '<p class="mut">Keine PDFs im Ordner.</p>'}
+    <div class="row" style="margin-top:8px"><label class="s" style="cursor:pointer">Weitere Anlage hinzufügen<input type="file" id="docIn" multiple hidden></label></div>
   </div>`;
+  $('#vgAll').oninput = e => { S.vorgaben['*'] = e.target.value; };
+  document.querySelectorAll('[data-vg]').forEach(el => el.oninput = () => { S.vorgaben[el.dataset.vg] = el.value; });
+  // nach dem Tippen neu zeichnen, damit die E-Mail-Links den Text enthalten
+  document.querySelectorAll('#vgAll,[data-vg]').forEach(el => el.onchange = () => renderExport());
+  document.querySelectorAll('[data-doc]').forEach(el => el.onchange = () => { S.docs[+el.dataset.doc].on = el.checked; renderExport(); });
+  $('#docIn').onchange = e => { S.docs.push(...[...e.target.files].map(file => ({ file, on: true }))); renderExport(); };
   foot(`<button class="s" onclick="go(3)">Zurück</button><button class="b" id="zipBtn">Alles als ZIP herunterladen</button>`);
-  $('#zipBtn').onclick = () => {
+  $('#zipBtn').onclick = async () => {
     learnFromCurrent();
     const entries = files.map(x => [x.name, S.lv.format === 'x83' ? new TextEncoder().encode(x.text) : GAEB.encode(x.text)]);
+    for (const x of files) { const v = vorgabeText(x.c); if (v) entries.push([`Vorgaben/${x.c}_Projektvorgaben.txt`, new TextEncoder().encode('﻿' + v.replace(/\r?\n/g, '\r\n') + '\r\n')]); }
+    for (const d of anlagen()) entries.push(['Anlagen/' + d.file.name.normalize('NFC'), new Uint8Array(await d.file.arrayBuffer())]);
     const csv = [['Gewerk', 'Kürzel', 'Datei', 'Firma', 'Ort', 'Entfernung km', 'E-Mail', 'Telefon', 'Hinweise']];
     for (const x of files) for (const f of firmsOf(x.c))
       csv.push([gwName(x.c), x.c, x.name, f.firma, f.ort, f.geo ? Math.round(dist(S.site, f.geo)) : '', f.mail, f.tel, f.bem.join(' | ')]);
@@ -744,13 +802,13 @@ function renderRules() {
   const bySrc = {}; LEARNED.forEach(e => bySrc[e.src] = (bySrc[e.src] || 0) + 1);
   $('#viewR').innerHTML = `
   <div class="card"><h2>So entsteht der Vorschlag</h2>
-    <p class="mut" style="margin:0">Für jede Position wird der Reihe nach geprüft: 1. passt eine <b>Katalog-Regel</b> (nur bei LV mit Katalognummern, z. B. Straßen.NRW), 2. kommt ein <b>Stichwort</b> im Kurztext vor, 3. sonst wird die <b>ähnlichste bekannte Position</b> gesucht – aus den 7 Beispielpaketen und allen LV, die hier schon exportiert wurden. Regeländerungen wirken beim nächsten Einlesen oder über „Vorschläge neu berechnen“.</p>
+    <p class="mut" style="margin:0">Für jede Position wird der Reihe nach geprüft: 1. passt eine <b>Katalog-Regel</b> (nur bei LV mit Katalognummern, z. B. Straßen.NRW), 2. steht die Position in einem <b>Abschnitt</b>, dessen Titel zu einem Gewerk passt (Titel-Regel, z. B. „Holzrahmenbau“), 3. kommt ein <b>Stichwort</b> im Kurztext vor, 4. sonst wird die <b>ähnlichste bekannte Position</b> gesucht – aus den Beispielpaketen und allen LV, die hier schon exportiert wurden. Stichwörter mit <span class="badge warn">Schnittstelle</span> (z. B. Kernbohrung, Abschottung) fügen ihr Gewerk zusätzlich hinzu und markieren die Position zur Prüfung. Regeländerungen wirken beim nächsten Einlesen oder über „Vorschläge neu berechnen“.</p>
     ${S.lv ? '<div class="row" style="margin-top:8px"><button class="s" id="reapply">Vorschläge für aktuelles LV neu berechnen</button><span class="mut">überschreibt die Zuordnung im aktuellen LV</span></div>' : ''}
   </div>
   <div class="grid2" style="grid-template-columns:1fr 1fr">
     <div class="card"><h2>Stichwörter</h2>
       <table><tr><th>Stichwort im Kurztext</th><th>Gewerk</th><th></th></tr>
-      ${KW.map((r, i) => `<tr><td>${esc(r.wort)}</td><td>${r.codes.map(c => esc(gwName(c))).join(', ')}</td><td><button class="s" data-kwdel="${i}">×</button></td></tr>`).join('')}
+      ${KW.map((r, i) => `<tr><td>${esc(r.wort)}${r.schnitt ? ' <span class="badge warn">Schnittstelle</span>' : ''}</td><td>${r.codes.map(c => esc(gwName(c))).join(', ')}</td><td><button class="s" data-kwdel="${i}">×</button></td></tr>`).join('')}
       <tr><td><input type="text" id="kwW" placeholder="z. B. leitlinie"></td><td><select id="kwG">${opts('')}</select></td><td><button class="s" id="kwAdd">+</button></td></tr></table>
     </div>
     <div class="card"><h2>Katalog-Regeln</h2>
@@ -760,6 +818,11 @@ function renderRules() {
       <tr><td><input type="text" id="katP" placeholder="z. B. 131" style="width:110px"></td><td><select id="katG"><option value="">Eigenleistung</option>${opts('')}</select></td><td><button class="s" id="katAdd">+</button></td></tr></table>
     </div>
   </div>
+  ${ENGINE.titelRulesFrom(GW).length ? `<div class="card"><h2>Titel-Regeln</h2>
+    <p class="mut" style="margin-top:0">Steht ein Wort am Anfang eines Wortes im Abschnittstitel, gehen alle Positionen des Abschnitts an das Gewerk. Gepflegt im Onboarding (Schritt Gewerke).</p>
+    <div class="list-scroll" style="max-height:260px"><table><tr><th>Wort im Abschnittstitel</th><th>Gewerk</th></tr>
+    ${ENGINE.titelRulesFrom(GW).map(r => `<tr><td>${esc(r.wort)}</td><td>${r.codes.map(c => esc(gwName(c))).join(', ')}</td></tr>`).join('')}</table></div>
+  </div>` : ''}
   <div class="card"><h2>Gelernte Beispiele</h2>
     ${Object.keys(bySrc).length ? `<table><tr><th>LV</th><th>Positionen</th><th></th></tr>${Object.entries(bySrc).map(([s, n]) => `<tr><td>${esc(s)}</td><td>${n}</td><td><button class="s" data-srcdel="${esc(s)}">entfernen</button></td></tr>`).join('')}</table>`
       : '<p class="mut">Noch keine. Jedes exportierte LV wird hier als Beispiel gespeichert.</p>'}
@@ -795,8 +858,9 @@ function renderHelp() {
     <h3 id="h1" style="margin-top:0">1. LV einlesen</h3>
     <ul>
       <li>Am einfachsten den ganzen Ausschreibungsordner auf die Fläche ziehen oder über „Ordner wählen“ auswählen.</li>
-      <li>Der PoC sucht darin das Gesamt-LV (GAEB 90 <kbd>.D83</kbd>/<kbd>.P83</kbd> oder GAEB XML <kbd>.X83</kbd>). Liegen schon Gewerke-Dateien wie <kbd>ASPH_xyz.D83</kbd> daneben, nimmt er die Datei, auf die sie sich beziehen.</li>
-      <li>Liegt eine PDF mit „Aufforderung“ im Namen bei (Aufforderung zur Angebotsabgabe), liest er daraus die Baustelle.</li>
+      <li>Der PoC sucht darin das Gesamt-LV (GAEB 90 <kbd>.D83</kbd>/<kbd>.P83</kbd> oder GAEB XML <kbd>.X83</kbd>, ebenso die Phasen 81 bis 86). Liegen schon Gewerke-Dateien wie <kbd>ASPH_xyz.D83</kbd> daneben, nimmt er die Datei, auf die sie sich beziehen.</li>
+      <li>Liegt eine PDF mit „Aufforderung“ im Namen bei (Aufforderung zur Angebotsabgabe), liest er daraus die Baustelle. Ohne Aufforderung sucht er in den anderen PDFs (z. B. Bewertungsmatrix), falls das LV keinen Ort nennt.</li>
+      <li>Formulare wie Tariftreue-, Mindestlohn- oder Eigenerklärungen merkt er sich als Anlagen für die Anfragen (Schritt 5).</li>
       <li>Alternativ über „Einzelne LV-Datei wählen“ nur das LV öffnen.</li>
     </ul>
 
@@ -804,6 +868,8 @@ function renderHelp() {
     <ul>
       <li>Nach dem Einlesen sind alle Positionen „nicht zugeordnet“. <b>Intelligente Zuordnung</b> schlägt für jede Position ein oder mehrere Gewerke vor. Bereits von Hand zugeordnete Positionen bleiben dabei unverändert.</li>
       <li>Unter jeder Position steht in grau, warum der Vorschlag kommt: Katalog-Regel, Stichwort oder eine ähnliche Position aus einem früheren LV. <span class="badge warn">unsicher</span> heißt, dass die Ähnlichkeit gering ist. Diese Positionen zuerst prüfen.</li>
+      <li><b>Abschnitt</b> heißt: Die Position steht unter einem Titel, der zu einem Gewerk passt (z. B. „Holzrahmenbau“, „KG 420 Heizung“). <span class="badge warn">Schnittstelle prüfen</span> heißt: Die Position betrifft zusätzlich ein zweites Gewerk (z. B. Kernbohrung im Abschnitt Heizung). Bitte entscheiden, wer sie anbietet.</li>
+      <li>In der Ansicht <b>LV-Reihenfolge</b> lässt sich über „ganzer Abschnitt an …“ ein ganzer Titel auf einmal einem Gewerk zuordnen.</li>
       <li><b>Eigenleistung</b> bedeutet: wird selbst ausgeführt und nicht angefragt.</li>
       <li>Korrigieren: über „+ Gewerk / Eigenleistung“ ein Gewerk hinzufügen, mit × eines entfernen. Eine Position kann mehreren Gewerken zugeordnet sein.</li>
       <li>Ansicht <b>Nach Gewerk</b>: Häkchen legen fest, welche Positionen in die Anfrage des jeweiligen Gewerks kommen. Ansicht <b>LV-Reihenfolge</b>: Klick auf ein Gewerk schaltet das Mitschicken ein oder aus (durchgestrichen = nicht mitschicken).</li>
@@ -831,6 +897,7 @@ function renderHelp() {
       <li>Die Zusammenfassung zeigt je Gewerk die Datei, die Zahl der Positionen und die gewählten Anbieter.</li>
       <li><b>Alles als ZIP herunterladen</b> liefert je Gewerk eine GAEB-Datei im Format des Original-LV (z. B. <kbd>ASPH_&lt;LV&gt;.D83</kbd>) und die <kbd>Verteiler.csv</kbd> mit Firma, Ort, Entfernung, E-Mail, Telefon und Hinweisen. Die CSV öffnet sich direkt in Excel.</li>
       <li>„E-Mail öffnen“ startet das Mailprogramm mit allen Anbietern in BCC. Die GAEB-Datei muss dort von Hand angehängt werden. Es wird nichts automatisch verschickt. Falls der Link nichts tut, stehen die Adressen auch in der Verteiler.csv.</li>
+      <li><b>Projektvorgaben</b> (für alle oder je Gewerk) stehen im Text der E-Mail und als Textdatei im ZIP (Ordner <kbd>Vorgaben</kbd>). Ausgewählte <b>Anlagen</b> liegen im ZIP im Ordner <kbd>Anlagen</kbd> und werden in der E-Mail aufgezählt.</li>
       <li>Beim Herunterladen merkt sich der PoC die Zuordnung als Beispiel. Spätere Vorschläge für ähnliche Positionen werden dadurch besser.</li>
     </ul>
   </div>
@@ -847,7 +914,8 @@ function renderHelp() {
     <p style="margin:0">Der Vorschlag prüft jede Position in dieser Reihenfolge:</p>
     <ol>
       <li><b>Katalog-Regel</b>: Die Katalognummer beginnt mit einer bekannten Nummer (nur bei LV mit Katalognummern, z. B. Straßen.NRW).</li>
-      <li><b>Stichwort</b>: Ein Stichwort steht im Kurztext, z. B. „Markierung“.</li>
+      <li><b>Titel-Regel</b>: Der Abschnittstitel passt zu einem Gewerk, z. B. „Holzrahmenbau“ oder „KG 420“.</li>
+      <li><b>Stichwort</b>: Ein Stichwort steht im Kurztext, z. B. „Markierung“. Schnittstellen-Stichwörter ergänzen das Gewerk des Abschnitts.</li>
       <li><b>Ähnlichste bekannte Position</b> aus den Beispielpaketen und allen bereits exportierten LV.</li>
     </ol>
     <p>Stichwörter und Katalog-Regeln lassen sich hier ergänzen oder löschen. Gelernte Beispiele können je LV entfernt werden. Mit „Vorschläge für aktuelles LV neu berechnen“ wirken Änderungen sofort, dabei wird die Zuordnung im aktuellen LV überschrieben.</p>

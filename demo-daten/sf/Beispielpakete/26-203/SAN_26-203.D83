@@ -1,0 +1,23 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02SAN                                                                     000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+114                                                                       000005
+12Los 4 Technische Geb„udeausrstung                                      000006
+114.01                                                                    000007
+12Abwasser-, Wasser- und Gasanlagen                                       000008
+214.01.0010            00000437000m                                       000009
+25Trinkwasserleitung Edelstahl DN 20                                      000010
+26   Trinkwasserleitung inkl. Formteile und Befestigung.                  000011
+214.01.0020            00000089000m                                       000012
+25Abwasserleitung PP DN 100                                               000013
+26   Schallged„mmte Abwasserleitung innerhalb des Geb„udes.               000014
+214.01.0030            00000016000St                                      000015
+25Waschtisch Kinderh”he                                                   000016
+26   Waschtisch inkl. Armatur, Montage in Kinderh”he.                     000017
+214.01.0040            00000011000St                                      000018
+25WC-Anlage wandh„ngend                                                   000019
+26   WC mit Vorwandelement und Bet„tigungsplatte.                         000020
+314.01                                                                    000021
+314                                                                       000022
+99                                                                   00004000023

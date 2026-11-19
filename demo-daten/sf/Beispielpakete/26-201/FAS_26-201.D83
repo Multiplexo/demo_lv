@@ -1,0 +1,20 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02FAS                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+112                                                                       000005
+12Los 2 GebÑudehÅlle                                                      000006
+112.02                                                                    000007
+12Fassade                                                                 000008
+212.02.0010            00000515000m2                                      000009
+25Fassadenbekleidung LÑrche, vertikal                                     000010
+26   Boden-Deckel-Schalung aus LÑrche auf Lattung.                        000011
+212.02.0020            00000138000m2                                      000012
+25Au·enputz auf Holzfaserplatte                                           000013
+26   Mineralischer Putz auf HolzfaserdÑmmplatte mit Armierung.            000014
+212.02.0030            00000248000m                                       000015
+25Insektenschutzgitter LÅftungsschlitz                                    000016
+26   Lochblech als Insektenschutz am Fu·punkt.                            000017
+312.02                                                                    000018
+312                                                                       000019
+99                                                                   00003000020

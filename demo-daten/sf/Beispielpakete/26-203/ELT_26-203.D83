@@ -1,0 +1,38 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02ELT                                                                     000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.02                                                                    000007
+12WÑrmeversorgungsanlagen                                                 000008
+214.02.0050            00000001000psch                                    000009
+25Elektrischer Anschluss WÑrmepumpe                                       000010
+26   Elektrischer Anschluss der WÑrmepumpe inkl. Zuleitung.               000011
+314.02                                                                    000012
+114.04                                                                    000013
+12Starkstromanlagen                                                       000014
+214.04.0010            00000002000St                                      000015
+25Unterverteilung Kita                                                    000016
+26   Unterverteilung mit FI/LS, komplett verdrahtet.                      000017
+214.04.0020            00005106000m                                       000018
+25Mantelleitung NYM-J 3x1,5                                               000019
+26   Installationsleitung im Holzbau in Leerrohr.                         000020
+214.04.0030            00000153000St                                      000021
+25Steckdose mit Kinderschutz                                              000022
+26   Schutzkontaktsteckdose mit erhîhtem BerÅhrungsschutz.                000023
+214.04.0040            00000050000St                                      000024
+25LED-Leuchte Gruppenraum                                                 000025
+26   Pendelleuchte LED, dimmbar.                                          000026
+214.04.0050            00000020000St                                      000027
+25Sicherheitsbeleuchtung Rettungszeichen                                  000028
+26   Rettungszeichenleuchte mit Einzelbatterie.                           000029
+314.04                                                                    000030
+114.06                                                                    000031
+12Blitzschutz und Erdung                                                  000032
+214.06.0010            00000001000St                                      000033
+25Potentialausgleich Hauptschiene                                         000034
+26   Potentialausgleichsschiene anschlie·en.                              000035
+314.06                                                                    000036
+314                                                                       000037
+99                                                                   00007000038

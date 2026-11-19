@@ -1,0 +1,23 @@
+00           26-202                                                       000001
+01Brogeb„ude in Holzhybridbauweise       20.06.26                        000002
+02SAN                                                                     000003
+03Muster Immobilien GmbH (Demo)                                           000004
+114                                                                       000005
+12Los 4 Technische Geb„udeausrstung                                      000006
+114.01                                                                    000007
+12Sanit„rinstallation                                                     000008
+214.01.0010            00000181000m                                       000009
+25Trinkwasserleitung Edelstahl DN 20                                      000010
+26   Trinkwasserleitung inkl. Formteile und Befestigung.                  000011
+214.01.0020            00000145000m                                       000012
+25Abwasserleitung PP DN 100                                               000013
+26   Schallged„mmte Abwasserleitung innerhalb des Geb„udes.               000014
+214.01.0030            00000009000St                                      000015
+25Waschtisch Kinderh”he                                                   000016
+26   Waschtisch inkl. Armatur, Montage in Kinderh”he.                     000017
+214.01.0040            00000007000St                                      000018
+25WC-Anlage wandh„ngend                                                   000019
+26   WC mit Vorwandelement und Bet„tigungsplatte.                         000020
+314.01                                                                    000021
+314                                                                       000022
+99                                                                   00004000023

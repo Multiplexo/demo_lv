@@ -1,0 +1,29 @@
+00           26-202                                                       000001
+01BÅrogebÑude in Holzhybridbauweise       20.06.26                        000002
+02BOHR                                                                    000003
+03Muster Immobilien GmbH (Demo)                                           000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.04                                                                    000007
+12Beton- und Stahlbetonarbeiten                                           000008
+211.04.0060            00000004000St                                      000009
+25Kernbohrung DN 150 fÅr Hausanschluss                                    000010
+26   Kernbohrung durch Stahlbeton herstellen, Ringraumdichtung.           000011
+311.04                                                                    000012
+311                                                                       000013
+114                                                                       000014
+12Los 4 Technische GebÑudeausrÅstung                                      000015
+114.01                                                                    000016
+12SanitÑrinstallation                                                     000017
+214.01.0070            00000011000St                                      000018
+25Kernbohrung DN 100 durch Decke                                          000019
+26   Kernbohrung fÅr Steigleitungen.                                      000020
+314.01                                                                    000021
+114.04                                                                    000022
+12Elektroinstallation                                                     000023
+214.04.0050            00000002000St                                      000024
+25Kernbohrung fÅr HauseinfÅhrung                                          000025
+26   Kernbohrung fÅr MehrspartenhauseinfÅhrung.                           000026
+314.04                                                                    000027
+314                                                                       000028
+99                                                                   00003000029

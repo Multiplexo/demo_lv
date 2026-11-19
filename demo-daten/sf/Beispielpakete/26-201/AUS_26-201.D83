@@ -1,0 +1,20 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02AUS                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+115                                                                       000005
+12Los 5 Auáenanlagen                                                      000006
+115.01                                                                    000007
+12Auáenanlagen                                                            000008
+215.01.0010            00000742000m2                                      000009
+25Betonpflaster 8 cm verlegen                                             000010
+26   Pflaster in Splittbett inkl. Tragschicht.                            000011
+215.01.0020            00000179000m                                       000012
+25Zaunanlage Stabgitter 1,40 m                                            000013
+26   Stabgitterzaun mit Toren.                                            000014
+215.01.0030            00000004000St                                      000015
+25Baumpflanzung Hochstamm                                                 000016
+26   Hochstamm 18-20 inkl. Verankerung.                                   000017
+315.01                                                                    000018
+315                                                                       000019
+99                                                                   00003000020

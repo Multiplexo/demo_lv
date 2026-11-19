@@ -1,0 +1,20 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02MET                                                                     000003
+03Stadt Beispielstadt (Demo)                                              000004
+113                                                                       000005
+12Los 3 Ausbau                                                            000006
+113.07                                                                    000007
+12Metallbauarbeiten                                                       000008
+213.07.0010            00000036000m                                       000009
+25TreppengelÑnder Stahl verzinkt                                          000010
+26   GelÑnder mit Handlauf, FÅllung Lochblech.                            000011
+213.07.0020            00000023000m                                       000012
+25Handlauf Edelstahl wandseitig                                           000013
+26   Handlauf mit Wandhaltern.                                            000014
+213.07.0030            00000003000St                                      000015
+25Gitterrost vor Eingang                                                  000016
+26   Gitterrost in Rahmen, rutschhemmend.                                 000017
+313.07                                                                    000018
+313                                                                       000019
+99                                                                   00003000020

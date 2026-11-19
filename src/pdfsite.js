@@ -33,7 +33,7 @@ const PDFSITE = (() => {
     if (b) return b[1].trim();
     // 2. erste Straße ohne Hausnummer (Hausnummer = Anschrift des Auftraggebers),
     //    zuerst hinter „Baumaßnahme“ o. Ä., dann im ganzen Text
-    const k = /Baumaßnahme|Bauvorhaben|Bezeichnung der Bauleistung/.exec(t);
+    const k = /Baumaßnahme|Bauvorhaben|Bezeichnung der Bauleistung|Projekt:/.exec(t);
     for (const part of [k ? t.slice(k.index, k.index + 600) : '', t]) {
       for (const m of part.matchAll(STR)) {
         const after = part.slice(m.index + m[0].length, m.index + m[0].length + 8);

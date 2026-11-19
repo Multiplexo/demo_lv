@@ -1,0 +1,25 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02BE                                                                      000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.01                                                                    000007
+12Baustelleneinrichtung                                                   000008
+211.01.0020            00000140000m                                       000009
+25Bauzaun mobil, Hîhe 2,00 m                                              000010
+26   Mobilen Bauzaun mit Fu·platten und Schellen liefern, aufstellen,     000011
+26   vorhalten und abbauen.                                               000012
+211.01.0030            00000009000Mon                                     000013
+25BÅrocontainer mit Besprechungsraum                                      000014
+26   Containeranlage als BaubÅro inkl. Mîblierung und AnschlÅssen         000015
+26   vorhalten.                                                           000016
+211.01.0040            00000010000Mon                                     000017
+25SanitÑrcontainer vorhalten                                              000018
+26   SanitÑrcontainer mit WC und Waschgelegenheit vorhalten und reinigen. 000019
+211.01.0050            00000003000St                                      000020
+25Baustromverteiler anschlie·en                                           000021
+26   Baustromverteiler liefern, anschlie·en und vorhalten.                000022
+311.01                                                                    000023
+311                                                                       000024
+99                                                                   00004000025

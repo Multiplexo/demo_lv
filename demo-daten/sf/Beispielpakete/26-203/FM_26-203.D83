@@ -1,0 +1,17 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02FM                                                                      000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.07                                                                    000007
+12KG 450 Fernmelde- und Brandmeldetechnik                                 000008
+214.07.0010            00000001000St                                      000009
+25Brandmelderzentrale                                                     000010
+26   Brandmelderzentrale mit Feuerwehrbedienfeld.                         000011
+214.07.0020            00002205000m                                       000012
+25Datenverkabelung Cat. 7                                                 000013
+26   Datenkabel Cat. 7 verlegen.                                          000014
+314.07                                                                    000015
+314                                                                       000016
+99                                                                   00002000017

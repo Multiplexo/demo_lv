@@ -1,0 +1,23 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02TIS                                                                     000003
+03Stadt Beispielstadt (Demo)                                              000004
+113                                                                       000005
+12Los 3 Ausbau                                                            000006
+113.06                                                                    000007
+12InnentÅren                                                              000008
+213.06.0010            00000048000St                                      000009
+25InnentÅr Holz, Rîhrenspan, Stahlzarge                                   000010
+26   InnentÅrelement mit DrÅckergarnitur.                                 000011
+213.06.0020            00000003000St                                      000012
+25InnentÅr T30-RS                                                         000013
+26   FeuerschutztÅr T30 mit Rauchschutz und ObentÅrschlie·er.             000014
+213.06.0030            00000068000m                                       000015
+25Fensterbank innen Holz                                                  000016
+26   Innenfensterbank aus Multiplex mit Linoleum.                         000017
+213.06.0040            00000005000St                                      000018
+25Garderobenbank mit FÑchern                                              000019
+26   Garderobenmîbel nach Zeichnung.                                      000020
+313.06                                                                    000021
+313                                                                       000022
+99                                                                   00004000023

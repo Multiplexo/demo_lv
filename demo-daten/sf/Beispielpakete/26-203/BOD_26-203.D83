@@ -1,0 +1,17 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02BOD                                                                     000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+113                                                                       000005
+12Los 3 Ausbau                                                            000006
+113.05                                                                    000007
+12Bodenbelagarbeiten                                                      000008
+213.05.0010            00000602000m2                                      000009
+25Linoleum 2,5 mm verlegen                                                000010
+26   Linoleumbelag vollfl„chig verkleben, N„hte verschweiáen.             000011
+213.05.0020            00000608000m                                       000012
+25Sockelleiste Holz                                                       000013
+26   Sockelleisten aus Massivholz montieren.                              000014
+313.05                                                                    000015
+313                                                                       000016
+99                                                                   00002000017

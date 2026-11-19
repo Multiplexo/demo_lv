@@ -5,3 +5,4 @@ __pycache__/
 # Nur der erfundene Demo-Kunde wird eingecheckt (siehe README, „Echte Kunden“).
 kunden/*
 !kunden/demo/
+!kunden/demo-sf/

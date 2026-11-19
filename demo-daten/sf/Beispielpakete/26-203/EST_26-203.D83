@@ -1,0 +1,20 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02EST                                                                     000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+113                                                                       000005
+12Los 3 Ausbau                                                            000006
+113.02                                                                    000007
+12Estricharbeiten                                                         000008
+213.02.0010            00001431000m2                                      000009
+25Calciumsulfatestrich 50 mm auf D„mmung                                  000010
+26   Flieáestrich als Heizestrich auf Trittschalld„mmung.                 000011
+213.02.0020            00000906000m2                                      000012
+25Trittschalld„mmung EPS-T 30                                             000013
+26   Trittschalld„mmung verlegen, Randd„mmstreifen.                       000014
+213.02.0030            00000051000m2                                      000015
+25Zementestrich im Nassbereich                                            000016
+26   Zementestrich mit Gef„lle in Nassr„umen.                             000017
+313.02                                                                    000018
+313                                                                       000019
+99                                                                   00003000020

@@ -1,0 +1,20 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02FLI                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+113                                                                       000005
+12Los 3 Ausbau                                                            000006
+113.03                                                                    000007
+12Fliesenarbeiten                                                         000008
+213.03.0010            00000342000m2                                      000009
+25Wandfliesen 30x60 im Dnnbett                                           000010
+26   Wandfliesen in Sanit„rr„umen verlegen und verfugen.                  000011
+213.03.0020            00000140000m2                                      000012
+25Bodenfliesen R10 30x60                                                  000013
+26   Bodenfliesen rutschhemmend verlegen.                                 000014
+213.03.0030            00000110000m2                                      000015
+25Verbundabdichtung Nassbereich                                           000016
+26   Flssige Verbundabdichtung unter Fliesen.                            000017
+313.03                                                                    000018
+313                                                                       000019
+99                                                                   00003000020

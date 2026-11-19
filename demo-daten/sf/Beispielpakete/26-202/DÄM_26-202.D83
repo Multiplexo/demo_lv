@@ -1,0 +1,20 @@
+00           26-202                                                       000001
+01BÅrogebÑude in Holzhybridbauweise       20.06.26                        000002
+02DéM                                                                     000003
+03Muster Immobilien GmbH (Demo)                                           000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.01                                                                    000007
+12SanitÑrinstallation                                                     000008
+214.01.0050            00000255000m                                       000009
+25RohrdÑmmung Trinkwasser kalt                                            000010
+26   DÑmmung von Rohrleitungen gegen Tauwasser.                           000011
+314.01                                                                    000012
+114.02                                                                    000013
+12Heizungsanlage                                                          000014
+214.02.0050            00000106000m                                       000015
+25RohrdÑmmung Heizungsleitungen                                           000016
+26   DÑmmung von Rohrleitungen nach GEG.                                  000017
+314.02                                                                    000018
+314                                                                       000019
+99                                                                   00002000020

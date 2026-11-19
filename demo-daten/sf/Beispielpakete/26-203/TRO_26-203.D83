@@ -1,0 +1,32 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02TRO                                                                     000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+113                                                                       000005
+12Los 3 Ausbau                                                            000006
+113.01                                                                    000007
+12Trockenbau                                                              000008
+213.01.0010            00000673000m2                                      000009
+25MetallstÑnderwand 125 mm, doppelt beplankt                              000010
+26   StÑnderwand mit Gipskarton 2x12,5 mm, Mineralwolle.                  000011
+213.01.0020            00000177000m2                                      000012
+25Vorsatzschale Installationswand                                         000013
+26   Vorsatzschale aus Gipsfaser fÅr SanitÑrbereiche.                     000014
+213.01.0030            00000466000m2                                      000015
+25Akustikdecke Gipskarton gelocht                                         000016
+26   Abhangdecke mit Lochplatten, ?w ? 0,7.                               000017
+213.01.0040            00000014000St                                      000018
+25Revisionsîffnung 400x400                                                000019
+26   Revisionsklappe in Abhangdecke einbauen.                             000020
+313.01                                                                    000021
+313                                                                       000022
+114                                                                       000023
+12Los 4 Technische GebÑudeausrÅstung                                      000024
+114.03                                                                    000025
+12Raumlufttechnische Anlagen                                              000026
+214.03.0050            00000007000St                                      000027
+25Abschottung LÅftungsleitung R 90                                        000028
+26   Brandschutzabschottung an WanddurchfÅhrungen.                        000029
+314.03                                                                    000030
+314                                                                       000031
+99                                                                   00005000032

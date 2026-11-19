@@ -1,0 +1,23 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02KAN                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.03                                                                    000007
+12Grundleitungen und EntwÑsserung                                         000008
+211.03.0010            00000108000m                                       000009
+25Grundleitung KG 2000 DN 150                                             000010
+26   Grundleitung aus PP liefern und verlegen, inkl. FormstÅcke.          000011
+211.03.0020            00000002000St                                      000012
+25Revisionsschacht DN 1000 herstellen                                     000013
+26   Schacht aus Betonfertigteilen mit Abdeckung Klasse D.                000014
+211.03.0030            00000053000m3                                      000015
+25Rigole fÅr Regenwasserversickerung                                      000016
+26   Rigolenkîrper aus Kunststoffboxen mit Geotextil herstellen.          000017
+211.03.0040            00000001000psch                                    000018
+25DichtheitsprÅfung Grundleitungen                                        000019
+26   DichtheitsprÅfung nach DIN EN 1610 mit Protokoll.                    000020
+311.03                                                                    000021
+311                                                                       000022
+99                                                                   00004000023

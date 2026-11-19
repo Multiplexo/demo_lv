@@ -1,0 +1,20 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02SAN                                                                     000003
+03Stadt Beispielstadt (Demo)                                              000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.01                                                                    000007
+12KG 410 SanitÑr                                                          000008
+214.01.0010            00000317000m                                       000009
+25Trinkwasserleitung Edelstahl DN 20                                      000010
+26   Trinkwasserleitung inkl. Formteile und Befestigung.                  000011
+214.01.0020            00000009000St                                      000012
+25Waschtisch Kinderhîhe                                                   000013
+26   Waschtisch inkl. Armatur, Montage in Kinderhîhe.                     000014
+214.01.0030            00000012000St                                      000015
+25WC-Anlage wandhÑngend                                                   000016
+26   WC mit Vorwandelement und BetÑtigungsplatte.                         000017
+314.01                                                                    000018
+314                                                                       000019
+99                                                                   00003000020

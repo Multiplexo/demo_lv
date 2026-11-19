@@ -1,0 +1,26 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02DACH                                                                    000003
+03Stadt Beispielstadt (Demo)                                              000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.06                                                                    000007
+12Dachabdichtung und GrÅndach                                             000008
+211.06.0010            00001003000m2                                      000009
+25Dachabdichtung Kunststoffbahn FPO 2-lagig                               000010
+26   Flachdachabdichtung auf Holzschalung inkl. Trennlage.                000011
+211.06.0020            00000436000m2                                      000012
+25Extensive DachbegrÅnung                                                 000013
+26   Extensive DachbegrÅnung mit Substrat 10 cm und Sedum.                000014
+211.06.0030            00000172000m                                       000015
+25Attikaabdeckung Aluminium                                               000016
+26   Attikaabdeckung aus Aluminium, Zuschnitt 400 mm.                     000017
+211.06.0040            00000086000m                                       000018
+25Dachrinne und Fallrohr Titanzink                                        000019
+26   DachentwÑsserung aus Titanzink liefern und montieren.                000020
+211.06.0050            00000015000St                                      000021
+25Absturzsicherung Anschlagpunkte                                         000022
+26   Einzelanschlagpunkte nach DIN EN 795 setzen.                         000023
+311.06                                                                    000024
+311                                                                       000025
+99                                                                   00005000026

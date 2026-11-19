@@ -1,0 +1,20 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02ERD                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.02                                                                    000007
+12Erdarbeiten                                                             000008
+211.02.0010            00000844000m3                                      000009
+25Baugrube ausheben, Bodenklasse 3-5                                      000010
+26   Baugrube profilgerecht ausheben, Boden laden und abfahren.           000011
+211.02.0020            00000142000m3                                      000012
+25Arbeitsraum verfÅllen und verdichten                                    000013
+26   ArbeitsrÑume lagenweise verfÅllen und verdichten.                    000014
+211.02.0030            00000370000m3                                      000015
+25Frostschutzschicht unter Bodenplatte                                    000016
+26   Frostschutzmaterial 0/32 liefern, einbauen und verdichten.           000017
+311.02                                                                    000018
+311                                                                       000019
+99                                                                   00003000020

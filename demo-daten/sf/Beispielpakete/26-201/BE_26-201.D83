@@ -1,0 +1,21 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02BE                                                                      000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.01                                                                    000007
+12Baustelleneinrichtung                                                   000008
+211.01.0020            00000090000m                                       000009
+25Bauzaun mobil, H”he 2,00 m                                              000010
+26   Mobilen Bauzaun mit Fuáplatten und Schellen liefern, aufstellen,     000011
+26   vorhalten und abbauen.                                               000012
+211.01.0030            00000009000Mon                                     000013
+25Sanit„rcontainer vorhalten                                              000014
+26   Sanit„rcontainer mit WC und Waschgelegenheit vorhalten und reinigen. 000015
+211.01.0040            00000003000St                                      000016
+25Baustromverteiler anschlieáen                                           000017
+26   Baustromverteiler liefern, anschlieáen und vorhalten.                000018
+311.01                                                                    000019
+311                                                                       000020
+99                                                                   00003000021

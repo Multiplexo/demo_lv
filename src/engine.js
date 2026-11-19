@@ -1,4 +1,4 @@
-// Gewerke-Vorschlag: Katalog-Regeln, Stichwort-Regeln, aehnliche Positionen.
+// Gewerke-Vorschlag: Katalog-Regeln, Titel-Regeln, Stichwort-Regeln, aehnliche Positionen.
 const ENGINE = (() => {
   // Leistungsbereich-Schluessel aus der Katalognummer (die ersten 3 Ziffern sind die Katalogausgabe)
   const katKey = kat => (kat && kat.length > 6 ? kat.slice(3) : '');
@@ -50,10 +50,26 @@ const ENGINE = (() => {
     };
   }
 
-  // kw-Regeln: [{wort, codes}] ; kat-Regeln: [{prefix, codes}]
-  function make(examples, kwRules, katRules) {
+  // Abschnittstitel einer Position, innerster zuerst. pos.titel (Liste) hat Vorrang, sonst über pos.group
+  function titlesOf(pos) {
+    if (Array.isArray(pos.titel)) return pos.titel.slice().reverse();
+    const out = [];
+    for (let g = pos.group; g; g = g.parent) if (g.title) out.push(g.title);
+    return out;
+  }
+  // „KG420“, „KG 420“ und „Kg. 420“ gleich behandeln
+  const normTitle = t => t.toLowerCase().replace(/\bkg\.?\s*(\d)/g, 'kg $1');
+  const esc = w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // Titel-Stichwörter müssen am Wortanfang stehen, sonst passt „elt“ auch in „Gestaltung“
+  const wordStart = w => new RegExp('(^|[^a-zäöüß0-9])' + esc(normTitle(w.trim())), 'i');
+
+  // kw-Regeln: [{wort, codes, schnitt?}] ; kat-Regeln: [{prefix, codes}] ; titel-Regeln: [{wort, codes}]
+  // schnitt = Schnittstelle: Gewerk kommt zusätzlich dazu und die Position wird als „bitte prüfen“ markiert
+  function make(examples, kwRules, katRules, titelRules = []) {
     const knn = makeKnn(examples);
-    const kws = kwRules.map(r => ({ ...r, re: new RegExp(r.wort.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') }));
+    const kws = kwRules.map(r => ({ ...r, re: new RegExp(esc(r.wort), 'i') }));
+    const tts = titelRules.filter(r => r.wort && r.wort.trim() && r.codes.length).map(r => ({ ...r, re: wordStart(r.wort) }));
+    const q = w => '„' + w + '“';
     return function suggest(pos) {
       // 1. Katalognummer
       const k = katKey(pos.kat);
@@ -61,19 +77,49 @@ const ENGINE = (() => {
         const r = katRules.find(r => k.startsWith(r.prefix));
         if (r) return { codes: r.codes.slice(), reason: `Katalog-Regel ${r.prefix}`, why: `die Katalognummer mit ${r.prefix} beginnt (Katalog-Regel)`, sure: true };
       }
-      // 2. Stichwörter im Kurztext
       const hits = kws.filter(r => r.re.test(pos.kurztext));
+      const schnitt = hits.filter(r => r.schnitt);
+      const extraOf = codes => [...new Set(schnitt.flatMap(r => r.codes))].filter(c => !codes.includes(c));
+      // 2. Abschnittstitel (innerster Abschnitt mit Treffer gewinnt)
+      if (tts.length) {
+        for (const t of titlesOf(pos)) {
+          const nt = normTitle(t), th = tts.filter(r => r.re.test(nt));
+          if (!th.length) continue;
+          let codes = [...new Set(th.flatMap(r => r.codes))];
+          // Abschnitt passt zu mehreren Gewerken (z. B. „Fassade und Fenster“): Stichwort oder ähnliche Position entscheidet
+          if (codes.length > 1) {
+            const inT = hits.filter(r => !r.schnitt && r.codes.every(c => codes.includes(c)));
+            const m = inT.length ? null : knn(pos.kurztext + ' ' + (pos.langtext || '').slice(0, 200));
+            const pick = inT.length ? [...new Set(inT.flatMap(r => r.codes))] : m && m.ex.codes.length && m.ex.codes.every(c => codes.includes(c)) ? m.ex.codes.slice() : null;
+            if (!pick) return { codes, reason: `Abschnitt ${q(t)} passt zu mehreren Gewerken`, why: `der Abschnitt ${q(t)} zu mehreren Gewerken passt (bitte eins wählen)`, sure: false };
+            codes = pick;
+            if (!extraOf(codes).length) return inT.length
+              ? { codes, reason: `Abschnitt ${q(t)} + Stichwort ${inT.map(r => q(r.wort)).join(', ')}`, why: `die Position im Abschnitt ${q(t)} steht und der Kurztext ${inT.map(r => q(r.wort)).join(', ')} enthält`, sure: true }
+              : { codes, reason: `Abschnitt ${q(t)}, ähnlich wie „${m.ex.kurz}“`, why: `die Position im Abschnitt ${q(t)} steht und „${m.ex.kurz}“ (${m.ex.src}) ähnlich ist`, sure: m.score >= 0.35, score: m.score };
+          }
+          const extra = extraOf(codes);
+          if (extra.length) return { codes: codes.concat(extra), reason: `Abschnitt ${q(t)} + Schnittstelle ${schnitt.map(r => q(r.wort)).join(', ')}`,
+            why: `die Position im Abschnitt ${q(t)} steht und der Kurztext ${schnitt.map(r => q(r.wort)).join(', ')} enthält (Schnittstelle, bitte prüfen)`, sure: false, schnitt: true };
+          return { codes, reason: `Abschnitt ${q(t)}`, why: `die Position im Abschnitt ${q(t)} steht (Titel-Regel)`, sure: true };
+        }
+      }
+      // 3. Stichwörter im Kurztext
       if (hits.length) {
         const codes = [...new Set(hits.flatMap(r => r.codes))];
-        return { codes, reason: 'Stichwort ' + hits.map(r => '„' + r.wort + '“').join(', '), why: 'der Kurztext ' + hits.map(r => '„' + r.wort + '“').join(', ') + ' enthält (Stichwort-Regel)', sure: true };
+        const s = schnitt.length > 0;
+        return { codes, reason: (s ? 'Schnittstelle ' : 'Stichwort ') + hits.map(r => q(r.wort)).join(', '),
+          why: 'der Kurztext ' + hits.map(r => q(r.wort)).join(', ') + ' enthält' + (s ? ' (Schnittstelle, bitte prüfen)' : ' (Stichwort-Regel)'), sure: !s, schnitt: s };
       }
-      // 3. ähnlichste bekannte Position
+      // 4. ähnlichste bekannte Position
       const m = knn(pos.kurztext + ' ' + (pos.langtext || '').slice(0, 200));
       if (!m) return { codes: [], reason: 'keine ähnliche Position bekannt', sure: false };
       return { codes: m.ex.codes.slice(), reason: `ähnlich wie „${m.ex.kurz}“ (${m.ex.src})`, sure: m.score >= 0.35, score: m.score, ex: m.ex };
     };
   }
 
-  return { make, learnKatRules, katKey };
+  // Titel-Regeln aus den Gewerken: {CODE: {titel: [...]}} -> [{wort, codes}]
+  const titelRulesFrom = gewerke => Object.entries(gewerke || {}).flatMap(([code, g]) => (g.titel || []).map(wort => ({ wort, codes: [code] })));
+
+  return { make, learnKatRules, katKey, titelRulesFrom, titlesOf };
 })();
 if (typeof module !== 'undefined') module.exports = ENGINE;

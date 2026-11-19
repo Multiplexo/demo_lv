@@ -1,0 +1,30 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02GER                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.01                                                                    000007
+12Baustelleneinrichtung                                                   000008
+211.01.0050            00000584000m2                                      000009
+25Arbeits- und Schutzger《t, Lastklasse 3                                 000010
+26   Fassadenger《t als Arbeits- und Schutzger《t stellen, vorhalten und  000011
+26   abbauen.                                                             000012
+311.01                                                                    000013
+111.06                                                                    000014
+12Dachabdichtung und Gr］dach                                             000015
+211.06.0050            00000130000m                                       000016
+25Dachfangger《t stellen                                                  000017
+26   Dachfangger《t als Absturzsicherung stellen und vorhalten.           000018
+311.06                                                                    000019
+311                                                                       000020
+112                                                                       000021
+12Los 2 Gebеdeh〕le                                                      000022
+112.02                                                                    000023
+12Fassade                                                                 000024
+212.02.0040            00000005000Wo                                      000025
+25Fassadenger《t vorhalten, Zusatzwochen                                  000026
+26   Ger《tvorhaltung ｜er die Grundstandzeit hinaus.                     000027
+312.02                                                                    000028
+312                                                                       000029
+99                                                                   00003000030

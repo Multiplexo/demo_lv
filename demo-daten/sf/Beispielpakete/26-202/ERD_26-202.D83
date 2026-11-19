@@ -1,0 +1,23 @@
+00           26-202                                                       000001
+01BÅrogebÑude in Holzhybridbauweise       20.06.26                        000002
+02ERD                                                                     000003
+03Muster Immobilien GmbH (Demo)                                           000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.02                                                                    000007
+12Erd- und Verbauarbeiten                                                 000008
+211.02.0010            00000823000m2                                      000009
+25Oberboden abtragen und lagern                                           000010
+26   Oberboden 30 cm abtragen, seitlich lagern, Mieten profilieren.       000011
+211.02.0020            00000768000m3                                      000012
+25Baugrube ausheben, Bodenklasse 3-5                                      000013
+26   Baugrube profilgerecht ausheben, Boden laden und abfahren.           000014
+211.02.0030            00000101000m3                                      000015
+25Arbeitsraum verfÅllen und verdichten                                    000016
+26   ArbeitsrÑume lagenweise verfÅllen und verdichten.                    000017
+211.02.0040            00000140000m3                                      000018
+25Frostschutzschicht unter Bodenplatte                                    000019
+26   Frostschutzmaterial 0/32 liefern, einbauen und verdichten.           000020
+311.02                                                                    000021
+311                                                                       000022
+99                                                                   00004000023

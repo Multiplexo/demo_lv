@@ -1,0 +1,20 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02RLT                                                                     000003
+03Stadt Beispielstadt (Demo)                                              000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.03                                                                    000007
+12KG 430 LÅftung                                                          000008
+214.03.0010            00000258000m2                                      000009
+25Luftkanal verzinkt, rechteckig                                          000010
+26   LuftkanÑle inkl. Formteile.                                          000011
+214.03.0020            00000010000St                                      000012
+25Brandschutzklappe K90                                                   000013
+26   Brandschutzklappe mit Auslîseeinrichtung.                            000014
+214.03.0030            00000059000St                                      000015
+25Zuluftauslass Drallauslass                                              000016
+26   Drallauslass mit Anschlusskasten.                                    000017
+314.03                                                                    000018
+314                                                                       000019
+99                                                                   00003000020

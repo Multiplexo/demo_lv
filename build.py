@@ -72,8 +72,11 @@ def load_kunde(slug):
 def onboarding(tpl, plz):
     o = src('onboarding.html')
     for key, f in [('/*GAEB*/', 'gaeb.js'), ('/*X83*/', 'x83.js'), ('/*ENGINE*/', 'engine.js'),
-                   ('/*XLSX*/', 'xlsx.js'), ('/*VORLAGE*/', 'vorlage.js'), ('/*ONBOARDING*/', 'onboarding.js')]:
+                   ('/*XLSX*/', 'xlsx.js'), ('/*ONBOARDING*/', 'onboarding.js')]:
         o = put(o, key, src(f))
+    # Vorlagen-Bibliothek: vorlage.js legt VORLAGEN an, jede vorlage_<sparte>.js hängt sich an
+    extra = sorted(f for f in os.listdir(SRC) if f.startswith('vorlage_') and f.endswith('.js'))
+    o = put(o, '/*VORLAGE*/', '\n'.join(src(f) for f in ['vorlage.js'] + extra))
     o = put(o, '/*PLZ*/', js(plz))
     # App-Vorlage als Base64, damit ihr HTML (inkl. </script>) das Onboarding nicht stört
     o = put(o, '/*APPTPL*/', base64.b64encode(tpl.encode('utf-8')).decode('ascii'))

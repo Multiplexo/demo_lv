@@ -1,0 +1,26 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02ROH                                                                     000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.04                                                                    000007
+12Rohbauarbeiten                                                          000008
+211.04.0010            00000058000m3                                      000009
+25Streifenfundament C25/30                                                000010
+26   Streifenfundamente aus Ortbeton herstellen, inkl. Schalung.          000011
+211.04.0020            00000666000m2                                      000012
+25Bodenplatte Stahlbeton d = 25 cm                                        000013
+26   Bodenplatte WU-Beton C30/37 herstellen, gl„tten.                     000014
+211.04.0030            00000039000t                                       000015
+25Betonstahl B500B liefern und verlegen                                   000016
+26   Bewehrung nach statischer Berechnung.                                000017
+211.04.0040            00001196000m2                                      000018
+25Perimeterd„mmung XPS 160 mm                                             000019
+26   Perimeterd„mmung unter Bodenplatte verlegen.                         000020
+211.04.0050            00000067000m3                                      000021
+25Treppenhauskern Stahlbetonw„nde                                         000022
+26   Aussteifende Stahlbetonw„nde des Treppenhauses herstellen.           000023
+311.04                                                                    000024
+311                                                                       000025
+99                                                                   00005000026

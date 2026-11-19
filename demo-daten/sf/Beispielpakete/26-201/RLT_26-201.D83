@@ -1,0 +1,23 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02RLT                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.03                                                                    000007
+12KG 430 LÅftung                                                          000008
+214.03.0010            00000001000St                                      000009
+25LÅftungsgerÑt mit WÑrmerÅckgewinnung                                    000010
+26   Zentrales LÅftungsgerÑt 3000 m¸/h, WRG ? 80 %.                       000011
+214.03.0020            00000304000m2                                      000012
+25Luftkanal verzinkt, rechteckig                                          000013
+26   LuftkanÑle inkl. Formteile.                                          000014
+214.03.0030            00000011000St                                      000015
+25Brandschutzklappe K90                                                   000016
+26   Brandschutzklappe mit Auslîseeinrichtung.                            000017
+214.03.0040            00000055000St                                      000018
+25Zuluftauslass Drallauslass                                              000019
+26   Drallauslass mit Anschlusskasten.                                    000020
+314.03                                                                    000021
+314                                                                       000022
+99                                                                   00004000023

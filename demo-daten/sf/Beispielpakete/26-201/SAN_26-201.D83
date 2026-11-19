@@ -1,0 +1,17 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02SAN                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+114                                                                       000005
+12Los 4 Technische Geb„udeausrstung                                      000006
+114.01                                                                    000007
+12KG 410 Sanit„r                                                          000008
+214.01.0010            00000092000m                                       000009
+25Abwasserleitung PP DN 100                                               000010
+26   Schallged„mmte Abwasserleitung innerhalb des Geb„udes.               000011
+214.01.0020            00000017000St                                      000012
+25Waschtisch Kinderh”he                                                   000013
+26   Waschtisch inkl. Armatur, Montage in Kinderh”he.                     000014
+314.01                                                                    000015
+314                                                                       000016
+99                                                                   00002000017

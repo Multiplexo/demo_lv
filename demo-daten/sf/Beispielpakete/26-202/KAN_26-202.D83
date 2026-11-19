@@ -1,0 +1,20 @@
+00           26-202                                                       000001
+01BÅrogebÑude in Holzhybridbauweise       20.06.26                        000002
+02KAN                                                                     000003
+03Muster Immobilien GmbH (Demo)                                           000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.03                                                                    000007
+12EntwÑsserungskanalarbeiten                                              000008
+211.03.0010            00000078000m                                       000009
+25Grundleitung KG 2000 DN 150                                             000010
+26   Grundleitung aus PP liefern und verlegen, inkl. FormstÅcke.          000011
+211.03.0020            00000003000St                                      000012
+25Revisionsschacht DN 1000 herstellen                                     000013
+26   Schacht aus Betonfertigteilen mit Abdeckung Klasse D.                000014
+211.03.0030            00000001000psch                                    000015
+25DichtheitsprÅfung Grundleitungen                                        000016
+26   DichtheitsprÅfung nach DIN EN 1610 mit Protokoll.                    000017
+311.03                                                                    000018
+311                                                                       000019
+99                                                                   00003000020

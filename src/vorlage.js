@@ -1,6 +1,12 @@
-// Vorlage Straßen- und Tiefbau: Gewerke, Kürzel-Aliasse und Start-Stichwörter.
-// Wird im Onboarding über „Vorlage laden“ übernommen und kann dort frei angepasst werden.
-const VORLAGE={
+// Vorlagen-Bibliothek: je Sparte Gewerke, Kürzel-Aliasse und Start-Stichwörter.
+// Im Onboarding wählbar („Vorlage laden“), auch mehrere nacheinander; danach frei anpassbar.
+// Weitere Sparten liegen in eigenen Dateien (vorlage_<sparte>.js) und hängen sich mit VORLAGEN.push(...) an.
+const VORLAGEN = [];
+
+// Straßen- und Tiefbau
+VORLAGEN.push({
+ "id": "strassenbau",
+ "name": "Straßen- und Tiefbau",
  "gewerke": [
   {
    "code": "BAU",
@@ -648,4 +654,4 @@ const VORLAGE={
    ]
   }
  ]
-};
+});

@@ -1,0 +1,23 @@
+00           26-203                                                       000001
+01Kita Regenbogen, Holzrahmenbau          20.06.26                        000002
+02HZG                                                                     000003
+03Gemeinde Beispieldorf (Demo)                                            000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.02                                                                    000007
+12WÑrmeversorgungsanlagen                                                 000008
+214.02.0010            00000002000St                                      000009
+25Luft-Wasser-WÑrmepumpe 40 kW                                            000010
+26   WÑrmepumpe au·en aufgestellt, inkl. Regelung.                        000011
+214.02.0020            00000002000St                                      000012
+25Pufferspeicher 1000 l                                                   000013
+26   Pufferspeicher mit DÑmmung.                                          000014
+214.02.0030            00001174000m2                                      000015
+25Fu·bodenheizung Noppensystem                                            000016
+26   Fu·bodenheizung inkl. Heizkreisverteiler.                            000017
+214.02.0040            00000005000St                                      000018
+25Heizkreisverteiler 8 Kreise                                             000019
+26   Verteiler mit Stellantrieben.                                        000020
+314.02                                                                    000021
+314                                                                       000022
+99                                                                   00004000023

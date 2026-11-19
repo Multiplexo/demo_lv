@@ -1,0 +1,14 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02ABD                                                                     000003
+03Stadt Beispielstadt (Demo)                                              000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.04                                                                    000007
+12GrÅndung und Bodenplatte                                                000008
+211.04.0050            00000229000m2                                      000009
+25Bauwerksabdichtung erdberÅhrter Bauteile                                000010
+26   Abdichtung nach DIN 18533 mit PMBC herstellen.                       000011
+311.04                                                                    000012
+311                                                                       000013
+99                                                                   00001000014

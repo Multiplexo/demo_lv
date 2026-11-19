@@ -1,0 +1,26 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02FM                                                                      000003
+03Stadt Beispielstadt (Demo)                                              000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.07                                                                    000007
+12KG 450 Fernmelde- und Brandmeldetechnik                                 000008
+214.07.0010            00000001000St                                      000009
+25Brandmelderzentrale                                                     000010
+26   Brandmelderzentrale mit Feuerwehrbedienfeld.                         000011
+214.07.0020            00000120000St                                      000012
+25Rauchmelder automatisch                                                 000013
+26   Optischer Rauchmelder mit Sockel.                                    000014
+214.07.0030            00002094000m                                       000015
+25Datenverkabelung Cat. 7                                                 000016
+26   Datenkabel Cat. 7 verlegen.                                          000017
+214.07.0040            00000038000St                                      000018
+25Netzwerkdose 2-fach                                                     000019
+26   Anschlussdose Cat. 6A.                                               000020
+214.07.0050            00000002000St                                      000021
+25Klingelanlage mit Video                                                 000022
+26   Video-TÅrsprechanlage.                                               000023
+314.07                                                                    000024
+314                                                                       000025
+99                                                                   00005000026

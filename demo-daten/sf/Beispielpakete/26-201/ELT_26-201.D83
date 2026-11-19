@@ -1,0 +1,29 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02ELT                                                                     000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.04                                                                    000007
+12KG 440 Elektro                                                          000008
+214.04.0010            00000003000St                                      000009
+25Unterverteilung Kita                                                    000010
+26   Unterverteilung mit FI/LS, komplett verdrahtet.                      000011
+214.04.0020            00004355000m                                       000012
+25Mantelleitung NYM-J 3x1,5                                               000013
+26   Installationsleitung im Holzbau in Leerrohr.                         000014
+214.04.0030            00000205000St                                      000015
+25Steckdose mit Kinderschutz                                              000016
+26   Schutzkontaktsteckdose mit erhîhtem BerÅhrungsschutz.                000017
+214.04.0040            00000097000St                                      000018
+25LED-Leuchte Gruppenraum                                                 000019
+26   Pendelleuchte LED, dimmbar.                                          000020
+314.04                                                                    000021
+114.06                                                                    000022
+12Blitzschutz und Erdung                                                  000023
+214.06.0030            00000002000St                                      000024
+25Potentialausgleich Hauptschiene                                         000025
+26   Potentialausgleichsschiene anschlie·en.                              000026
+314.06                                                                    000027
+314                                                                       000028
+99                                                                   00005000029

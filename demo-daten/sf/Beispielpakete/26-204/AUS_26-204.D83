@@ -1,0 +1,23 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02AUS                                                                     000003
+03Stadt Beispielstadt (Demo)                                              000004
+115                                                                       000005
+12Los 5 Auáenanlagen                                                      000006
+115.01                                                                    000007
+12Auáenanlagen                                                            000008
+215.01.0010            00000589000m2                                      000009
+25Betonpflaster 8 cm verlegen                                             000010
+26   Pflaster in Splittbett inkl. Tragschicht.                            000011
+215.01.0020            00000549000m2                                      000012
+25Rasenfl„che ans„en                                                      000013
+26   Gebrauchsrasen ans„en inkl. Fertigstellungspflege.                   000014
+215.01.0030            00000194000m                                       000015
+25Zaunanlage Stabgitter 1,40 m                                            000016
+26   Stabgitterzaun mit Toren.                                            000017
+215.01.0040            00000009000St                                      000018
+25Baumpflanzung Hochstamm                                                 000019
+26   Hochstamm 18-20 inkl. Verankerung.                                   000020
+315.01                                                                    000021
+315                                                                       000022
+99                                                                   00004000023

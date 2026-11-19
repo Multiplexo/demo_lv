@@ -1,0 +1,35 @@
+00           26-202                                                       000001
+01BÅrogebÑude in Holzhybridbauweise       20.06.26                        000002
+02TRO                                                                     000003
+03Muster Immobilien GmbH (Demo)                                           000004
+113                                                                       000005
+12Los 3 Ausbau                                                            000006
+113.01                                                                    000007
+12Trockenbauarbeiten                                                      000008
+213.01.0010            00000096000m2                                      000009
+25Vorsatzschale Installationswand                                         000010
+26   Vorsatzschale aus Gipsfaser fÅr SanitÑrbereiche.                     000011
+213.01.0020            00000725000m2                                      000012
+25Akustikdecke Gipskarton gelocht                                         000013
+26   Abhangdecke mit Lochplatten, ?w ? 0,7.                               000014
+213.01.0030            00000011000St                                      000015
+25Revisionsîffnung 400x400                                                000016
+26   Revisionsklappe in Abhangdecke einbauen.                             000017
+313.01                                                                    000018
+313                                                                       000019
+114                                                                       000020
+12Los 4 Technische GebÑudeausrÅstung                                      000021
+114.01                                                                    000022
+12SanitÑrinstallation                                                     000023
+214.01.0060            00000020000St                                      000024
+25Brandschutzabschottung RohrdurchfÅhrung                                 000025
+26   Abschottung R 90 an DeckendurchfÅhrungen.                            000026
+314.01                                                                    000027
+114.03                                                                    000028
+12LÅftungsanlage                                                          000029
+214.03.0050            00000020000St                                      000030
+25Abschottung LÅftungsleitung R 90                                        000031
+26   Brandschutzabschottung an WanddurchfÅhrungen.                        000032
+314.03                                                                    000033
+314                                                                       000034
+99                                                                   00005000035

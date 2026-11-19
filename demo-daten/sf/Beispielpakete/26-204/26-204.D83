@@ -1,0 +1,403 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 10.06.26                        000002
+02Grundschule Erweiterung in Holzmodulbau                                 000003
+03Stadt Beispielstadt (Demo)                                              000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.01                                                                    000007
+12Baustelleneinrichtung                                                   000008
+211.01.0010            00000001000psch                                    000009
+25Baustelle einrichten                                                    000010
+26   Baustelleneinrichtung fÅr alle Leistungen des GU herstellen,         000011
+26   vorhalten und rÑumen.                                                000012
+211.01.0020            00000123000m                                       000013
+25Bauzaun mobil, Hîhe 2,00 m                                              000014
+26   Mobilen Bauzaun mit Fu·platten und Schellen liefern, aufstellen,     000015
+26   vorhalten und abbauen.                                               000016
+211.01.0030            00000014000Mon                                     000017
+25BÅrocontainer mit Besprechungsraum                                      000018
+26   Containeranlage als BaubÅro inkl. Mîblierung und AnschlÅssen         000019
+26   vorhalten.                                                           000020
+211.01.0040            00000014000Mon                                     000021
+25SanitÑrcontainer vorhalten                                              000022
+26   SanitÑrcontainer mit WC und Waschgelegenheit vorhalten und reinigen. 000023
+211.01.0050            00000535000m2                                      000024
+25Arbeits- und SchutzgerÅst, Lastklasse 3                                 000025
+26   FassadengerÅst als Arbeits- und SchutzgerÅst stellen, vorhalten und  000026
+26   abbauen.                                                             000027
+311.01                                                                    000028
+111.02                                                                    000029
+12Erdarbeiten                                                             000030
+211.02.0010            00001737000m2                                      000031
+25Oberboden abtragen und lagern                                           000032
+26   Oberboden 30 cm abtragen, seitlich lagern, Mieten profilieren.       000033
+211.02.0020            00000833000m3                                      000034
+25Baugrube ausheben, Bodenklasse 3-5                                      000035
+26   Baugrube profilgerecht ausheben, Boden laden und abfahren.           000036
+211.02.0030            00000228000m3                                      000037
+25Arbeitsraum verfÅllen und verdichten                                    000038
+26   ArbeitsrÑume lagenweise verfÅllen und verdichten.                    000039
+211.02.0040            00000173000m3                                      000040
+25Frostschutzschicht unter Bodenplatte                                    000041
+26   Frostschutzmaterial 0/32 liefern, einbauen und verdichten.           000042
+311.02                                                                    000043
+111.03                                                                    000044
+12Grundleitungen und EntwÑsserung                                         000045
+211.03.0010            00000087000m                                       000046
+25Grundleitung KG 2000 DN 150                                             000047
+26   Grundleitung aus PP liefern und verlegen, inkl. FormstÅcke.          000048
+211.03.0020            00000004000St                                      000049
+25Revisionsschacht DN 1000 herstellen                                     000050
+26   Schacht aus Betonfertigteilen mit Abdeckung Klasse D.                000051
+211.03.0030            00000001000psch                                    000052
+25DichtheitsprÅfung Grundleitungen                                        000053
+26   DichtheitsprÅfung nach DIN EN 1610 mit Protokoll.                    000054
+311.03                                                                    000055
+111.04                                                                    000056
+12GrÅndung und Bodenplatte                                                000057
+211.04.0010            00000928000m2                                      000058
+25Bodenplatte Stahlbeton d = 25 cm                                        000059
+26   Bodenplatte WU-Beton C30/37 herstellen, glÑtten.                     000060
+211.04.0020            00000023000t                                       000061
+25Betonstahl B500B liefern und verlegen                                   000062
+26   Bewehrung nach statischer Berechnung.                                000063
+211.04.0030            00000717000m2                                      000064
+25PerimeterdÑmmung XPS 160 mm                                             000065
+26   PerimeterdÑmmung unter Bodenplatte verlegen.                         000066
+211.04.0040            00000065000m3                                      000067
+25Treppenhauskern StahlbetonwÑnde                                         000068
+26   Aussteifende StahlbetonwÑnde des Treppenhauses herstellen.           000069
+211.04.0050            00000229000m2                                      000070
+25Bauwerksabdichtung erdberÅhrter Bauteile                                000071
+26   Abdichtung nach DIN 18533 mit PMBC herstellen.                       000072
+211.04.0060            00000004000St                                      000073
+25Kernbohrung DN 150 fÅr Hausanschluss                                    000074
+26   Kernbohrung durch Stahlbeton herstellen, Ringraumdichtung.           000075
+211.04.0070            00000100000m                                       000076
+25Fundamenterder Edelstahl V4A                                            000077
+26   Fundamenterder als Ring verlegen und anschlie·en.                    000078
+311.04                                                                    000079
+111.05                                                                    000080
+12Holzrahmenbau                                                           000081
+211.05.0010            00001000000m2                                      000082
+25Au·enwandelement Holzrahmen, gedÑmmt                                    000083
+26   Holzrahmen-Au·enwand mit ZellulosedÑmmung 240 mm, OSB innen,         000084
+26   Holzfaserplatte au·en, vorgefertigt.                                 000085
+211.05.0020            00000316000m2                                      000086
+25Innenwandelement Holzrahmen tragend                                     000087
+26   Tragende Innenwand in Holzrahmenbauweise, beidseitig beplankt.       000088
+211.05.0030            00000927000m2                                      000089
+25Brettsperrholzdecke 200 mm                                              000090
+26   Deckenelemente aus Brettsperrholz liefern und montieren.             000091
+211.05.0040            00000028000m3                                      000092
+25BrettschichtholztrÑger GL24h                                            000093
+26   UnterzÅge aus Brettschichtholz liefern und montieren.                000094
+211.05.0050            00000446000m2                                      000095
+25Dachelement Holzrahmen mit DÑmmung                                      000096
+26   Dachelemente in Holzrahmenbauweise, DÑmmung 300 mm.                  000097
+211.05.0060            00000322000m                                       000098
+25Luftdichtheitsebene abkleben                                            000099
+26   Stî·e der Dampfbremse luftdicht abkleben.                            000100
+211.05.0070            00000006000Tag                                     000101
+25Montage mit Autokran                                                    000102
+26   Montage der Elemente inkl. Kranstellung und Montagepersonal.         000103
+311.05                                                                    000104
+111.06                                                                    000105
+12Dachabdichtung und GrÅndach                                             000106
+211.06.0010            00001003000m2                                      000107
+25Dachabdichtung Kunststoffbahn FPO 2-lagig                               000108
+26   Flachdachabdichtung auf Holzschalung inkl. Trennlage.                000109
+211.06.0020            00000436000m2                                      000110
+25Extensive DachbegrÅnung                                                 000111
+26   Extensive DachbegrÅnung mit Substrat 10 cm und Sedum.                000112
+211.06.0030            00000172000m                                       000113
+25Attikaabdeckung Aluminium                                               000114
+26   Attikaabdeckung aus Aluminium, Zuschnitt 400 mm.                     000115
+211.06.0040            00000086000m                                       000116
+25Dachrinne und Fallrohr Titanzink                                        000117
+26   DachentwÑsserung aus Titanzink liefern und montieren.                000118
+211.06.0050            00000015000St                                      000119
+25Absturzsicherung Anschlagpunkte                                         000120
+26   Einzelanschlagpunkte nach DIN EN 795 setzen.                         000121
+211.06.0060            00000120000m                                       000122
+25DachfanggerÅst stellen                                                  000123
+26   DachfanggerÅst als Absturzsicherung stellen und vorhalten.           000124
+311.06                                                                    000125
+311                                                                       000126
+112                                                                       000127
+12Los 2 GebÑudehÅlle                                                      000128
+112.01                                                                    000129
+12Fenster und Au·entÅren                                                  000130
+212.01.0010            00000058000St                                      000131
+25Holz-Alu-Fenster 3-fach verglast                                        000132
+26   Holz-Aluminium-Fenster, Uw ? 0,8 W/m˝K, inkl. Montage nach RAL.      000133
+212.01.0020            00000001000St                                      000134
+25HauseingangstÅr Holz-Alu, barrierefrei                                  000135
+26   EingangstÅr mit Seitenteil, barrierefreie Schwelle, Motorschloss.    000136
+212.01.0030            00000007000St                                      000137
+25FenstertÅr Terrassenausgang                                             000138
+26   FenstertÅr zweiflÅgelig mit Stulp.                                   000139
+212.01.0040            00000141000m                                       000140
+25Fensterbank au·en Aluminium                                             000141
+26   Au·enfensterbank aus Aluminium mit Endkappen.                        000142
+312.01                                                                    000143
+112.02                                                                    000144
+12Fassade                                                                 000145
+212.02.0010            00000357000m2                                      000146
+25Fassadenbekleidung LÑrche, vertikal                                     000147
+26   Boden-Deckel-Schalung aus LÑrche auf Lattung.                        000148
+212.02.0020            00000875000m2                                      000149
+25Unterkonstruktion Konterlattung                                         000150
+26   Konterlattung 40/60 fÅr hinterlÅftete Fassade.                       000151
+212.02.0030            00000279000m2                                      000152
+25Au·enputz auf Holzfaserplatte                                           000153
+26   Mineralischer Putz auf HolzfaserdÑmmplatte mit Armierung.            000154
+212.02.0040            00000252000m                                       000155
+25Insektenschutzgitter LÅftungsschlitz                                    000156
+26   Lochblech als Insektenschutz am Fu·punkt.                            000157
+312.02                                                                    000158
+112.03                                                                    000159
+12Sonnenschutz                                                            000160
+212.03.0010            00000071000St                                      000161
+25Raffstore elektrisch, Aluminium                                         000162
+26   Au·enraffstore mit Motor und WindwÑchter.                            000163
+212.03.0020            00000013000St                                      000164
+25Textiler Sonnenschutz Screen                                            000165
+26   Senkrechtmarkise mit Screengewebe und Motor.                         000166
+312.03                                                                    000167
+312                                                                       000168
+113                                                                       000169
+12Los 3 Ausbau                                                            000170
+113.01                                                                    000171
+12Trockenbau                                                              000172
+213.01.0010            00000715000m2                                      000173
+25MetallstÑnderwand 125 mm, doppelt beplankt                              000174
+26   StÑnderwand mit Gipskarton 2x12,5 mm, Mineralwolle.                  000175
+213.01.0020            00000490000m2                                      000176
+25Akustikdecke Gipskarton gelocht                                         000177
+26   Abhangdecke mit Lochplatten, ?w ? 0,7.                               000178
+213.01.0030            00000017000St                                      000179
+25Revisionsîffnung 400x400                                                000180
+26   Revisionsklappe in Abhangdecke einbauen.                             000181
+313.01                                                                    000182
+113.02                                                                    000183
+12Estricharbeiten                                                         000184
+213.02.0010            00001127000m2                                      000185
+25Calciumsulfatestrich 50 mm auf DÑmmung                                  000186
+26   Flie·estrich als Heizestrich auf TrittschalldÑmmung.                 000187
+213.02.0020            00000110000m2                                      000188
+25Zementestrich im Nassbereich                                            000189
+26   Zementestrich mit GefÑlle in NassrÑumen.                             000190
+313.02                                                                    000191
+113.03                                                                    000192
+12Fliesenarbeiten                                                         000193
+213.03.0010            00000415000m2                                      000194
+25Wandfliesen 30x60 im DÅnnbett                                           000195
+26   Wandfliesen in SanitÑrrÑumen verlegen und verfugen.                  000196
+213.03.0020            00000189000m2                                      000197
+25Bodenfliesen R10 30x60                                                  000198
+26   Bodenfliesen rutschhemmend verlegen.                                 000199
+213.03.0030            00000245000m2                                      000200
+25Verbundabdichtung Nassbereich                                           000201
+26   FlÅssige Verbundabdichtung unter Fliesen.                            000202
+313.03                                                                    000203
+113.04                                                                    000204
+12Malerarbeiten                                                           000205
+213.04.0010            00002467000m2                                      000206
+25Dispersionsanstrich WÑnde                                               000207
+26   WandflÑchen spachteln Q3 und mit Dispersion streichen.               000208
+213.04.0020            00000465000m2                                      000209
+25Deckenanstrich Gipskarton                                               000210
+26   DeckenflÑchen grundieren und streichen.                              000211
+213.04.0030            00000253000m2                                      000212
+25Holzlasur Innenbauteile                                                 000213
+26   SichtholzflÑchen lasieren.                                           000214
+313.04                                                                    000215
+113.05                                                                    000216
+12Bodenbelagarbeiten                                                      000217
+213.05.0010            00000889000m2                                      000218
+25Linoleum 2,5 mm verlegen                                                000219
+26   Linoleumbelag vollflÑchig verkleben, NÑhte verschwei·en.             000220
+213.05.0020            00000012000m2                                      000221
+25Sauberlaufzone im Eingang                                               000222
+26   Sauberlaufmatte in Mattenrahmen.                                     000223
+313.05                                                                    000224
+113.06                                                                    000225
+12InnentÅren                                                              000226
+213.06.0010            00000048000St                                      000227
+25InnentÅr Holz, Rîhrenspan, Stahlzarge                                   000228
+26   InnentÅrelement mit DrÅckergarnitur.                                 000229
+213.06.0020            00000003000St                                      000230
+25InnentÅr T30-RS                                                         000231
+26   FeuerschutztÅr T30 mit Rauchschutz und ObentÅrschlie·er.             000232
+213.06.0030            00000068000m                                       000233
+25Fensterbank innen Holz                                                  000234
+26   Innenfensterbank aus Multiplex mit Linoleum.                         000235
+213.06.0040            00000005000St                                      000236
+25Garderobenbank mit FÑchern                                              000237
+26   Garderobenmîbel nach Zeichnung.                                      000238
+313.06                                                                    000239
+113.07                                                                    000240
+12Metallbauarbeiten                                                       000241
+213.07.0010            00000036000m                                       000242
+25TreppengelÑnder Stahl verzinkt                                          000243
+26   GelÑnder mit Handlauf, FÅllung Lochblech.                            000244
+213.07.0020            00000023000m                                       000245
+25Handlauf Edelstahl wandseitig                                           000246
+26   Handlauf mit Wandhaltern.                                            000247
+213.07.0030            00000003000St                                      000248
+25Gitterrost vor Eingang                                                  000249
+26   Gitterrost in Rahmen, rutschhemmend.                                 000250
+313.07                                                                    000251
+113.08                                                                    000252
+12Schlie·anlage                                                           000253
+213.08.0010            00000073000St                                      000254
+25Schlie·zylinder Profil, Schlie·anlage                                   000255
+26   Profilzylinder in HauptschlÅsselanlage.                              000256
+213.08.0020            00000005000St                                      000257
+25GeneralhauptschlÅssel                                                   000258
+26   GeneralhauptschlÅssel fÅr die Anlage.                                000259
+313.08                                                                    000260
+113.09                                                                    000261
+12Baureinigung                                                            000262
+213.09.0010            00001415000m2                                      000263
+25Bauendreinigung                                                         000264
+26   Bauendreinigung aller RÑume vor öbergabe.                            000265
+313.09                                                                    000266
+313                                                                       000267
+114                                                                       000268
+12Los 4 Technische GebÑudeausrÅstung                                      000269
+114.01                                                                    000270
+12KG 410 SanitÑr                                                          000271
+214.01.0010            00000317000m                                       000272
+25Trinkwasserleitung Edelstahl DN 20                                      000273
+26   Trinkwasserleitung inkl. Formteile und Befestigung.                  000274
+214.01.0020            00000009000St                                      000275
+25Waschtisch Kinderhîhe                                                   000276
+26   Waschtisch inkl. Armatur, Montage in Kinderhîhe.                     000277
+214.01.0030            00000012000St                                      000278
+25WC-Anlage wandhÑngend                                                   000279
+26   WC mit Vorwandelement und BetÑtigungsplatte.                         000280
+214.01.0040            00000184000m                                       000281
+25RohrdÑmmung Trinkwasser kalt                                            000282
+26   DÑmmung von Rohrleitungen gegen Tauwasser.                           000283
+214.01.0050            00000029000St                                      000284
+25Brandschutzabschottung RohrdurchfÅhrung                                 000285
+26   Abschottung R 90 an DeckendurchfÅhrungen.                            000286
+314.01                                                                    000287
+114.02                                                                    000288
+12KG 420 Heizung                                                          000289
+214.02.0010            00000002000St                                      000290
+25Luft-Wasser-WÑrmepumpe 40 kW                                            000291
+26   WÑrmepumpe au·en aufgestellt, inkl. Regelung.                        000292
+214.02.0020            00000983000m2                                      000293
+25Fu·bodenheizung Noppensystem                                            000294
+26   Fu·bodenheizung inkl. Heizkreisverteiler.                            000295
+214.02.0030            00000007000St                                      000296
+25Heizkreisverteiler 8 Kreise                                             000297
+26   Verteiler mit Stellantrieben.                                        000298
+214.02.0040            00000001000psch                                    000299
+25Elektrischer Anschluss WÑrmepumpe                                       000300
+26   Elektrischer Anschluss der WÑrmepumpe inkl. Zuleitung.               000301
+314.02                                                                    000302
+114.03                                                                    000303
+12KG 430 LÅftung                                                          000304
+214.03.0010            00000258000m2                                      000305
+25Luftkanal verzinkt, rechteckig                                          000306
+26   LuftkanÑle inkl. Formteile.                                          000307
+214.03.0020            00000010000St                                      000308
+25Brandschutzklappe K90                                                   000309
+26   Brandschutzklappe mit Auslîseeinrichtung.                            000310
+214.03.0030            00000059000St                                      000311
+25Zuluftauslass Drallauslass                                              000312
+26   Drallauslass mit Anschlusskasten.                                    000313
+214.03.0040            00000015000St                                      000314
+25Abschottung LÅftungsleitung R 90                                        000315
+26   Brandschutzabschottung an WanddurchfÅhrungen.                        000316
+314.03                                                                    000317
+114.04                                                                    000318
+12KG 440 Elektro                                                          000319
+214.04.0010            00000004000St                                      000320
+25Unterverteilung Kita                                                    000321
+26   Unterverteilung mit FI/LS, komplett verdrahtet.                      000322
+214.04.0020            00000156000St                                      000323
+25Steckdose mit Kinderschutz                                              000324
+26   Schutzkontaktsteckdose mit erhîhtem BerÅhrungsschutz.                000325
+214.04.0030            00000043000St                                      000326
+25LED-Leuchte Gruppenraum                                                 000327
+26   Pendelleuchte LED, dimmbar.                                          000328
+214.04.0040            00000010000St                                      000329
+25Sicherheitsbeleuchtung Rettungszeichen                                  000330
+26   Rettungszeichenleuchte mit Einzelbatterie.                           000331
+314.04                                                                    000332
+114.05                                                                    000333
+12Photovoltaikanlage                                                      000334
+214.05.0010            00000149000St                                      000335
+25PV-Modul monokristallin 420 Wp                                          000336
+26   PV-Module auf AufstÑnderung fÅr GrÅndach.                            000337
+214.05.0020            00000001000St                                      000338
+25Wechselrichter 30 kW                                                    000339
+26   String-Wechselrichter inkl. Montage.                                 000340
+214.05.0030            00000223000m2                                      000341
+25Unterkonstruktion GrÅndach, ballastiert                                 000342
+26   AufstÑnderung ohne Durchdringung der Abdichtung.                     000343
+314.05                                                                    000344
+114.06                                                                    000345
+12Blitzschutz und Erdung                                                  000346
+214.06.0010            00000236000m                                       000347
+25Fangeinrichtung auf Flachdach                                           000348
+26   Fangleitung und Fangstangen.                                         000349
+214.06.0020            00000048000m                                       000350
+25Ableitung Aluminium                                                     000351
+26   Ableitung an der Fassade.                                            000352
+214.06.0030            00000002000St                                      000353
+25Potentialausgleich Hauptschiene                                         000354
+26   Potentialausgleichsschiene anschlie·en.                              000355
+314.06                                                                    000356
+114.07                                                                    000357
+12KG 450 Fernmelde- und Brandmeldetechnik                                 000358
+214.07.0010            00000001000St                                      000359
+25Brandmelderzentrale                                                     000360
+26   Brandmelderzentrale mit Feuerwehrbedienfeld.                         000361
+214.07.0020            00000120000St                                      000362
+25Rauchmelder automatisch                                                 000363
+26   Optischer Rauchmelder mit Sockel.                                    000364
+214.07.0030            00002094000m                                       000365
+25Datenverkabelung Cat. 7                                                 000366
+26   Datenkabel Cat. 7 verlegen.                                          000367
+214.07.0040            00000038000St                                      000368
+25Netzwerkdose 2-fach                                                     000369
+26   Anschlussdose Cat. 6A.                                               000370
+214.07.0050            00000002000St                                      000371
+25Klingelanlage mit Video                                                 000372
+26   Video-TÅrsprechanlage.                                               000373
+314.07                                                                    000374
+114.08                                                                    000375
+12Aufzugsanlage                                                           000376
+214.08.0010            00000001000St                                      000377
+25Personenaufzug 630 kg, barrierefrei                                     000378
+26   Seilaufzug ohne Triebwerksraum, 2 Haltestellen.                      000379
+214.08.0020            00000001000psch                                    000380
+25Wartung Aufzug 1. Jahr                                                  000381
+26   Vollwartung im ersten Betriebsjahr.                                  000382
+314.08                                                                    000383
+314                                                                       000384
+115                                                                       000385
+12Los 5 Au·enanlagen                                                      000386
+115.01                                                                    000387
+12Au·enanlagen                                                            000388
+215.01.0010            00000589000m2                                      000389
+25Betonpflaster 8 cm verlegen                                             000390
+26   Pflaster in Splittbett inkl. Tragschicht.                            000391
+215.01.0020            00000549000m2                                      000392
+25RasenflÑche ansÑen                                                      000393
+26   Gebrauchsrasen ansÑen inkl. Fertigstellungspflege.                   000394
+215.01.0030            00000194000m                                       000395
+25Zaunanlage Stabgitter 1,40 m                                            000396
+26   Stabgitterzaun mit Toren.                                            000397
+215.01.0040            00000009000St                                      000398
+25Baumpflanzung Hochstamm                                                 000399
+26   Hochstamm 18-20 inkl. Verankerung.                                   000400
+315.01                                                                    000401
+315                                                                       000402
+99                                                                   00099000403

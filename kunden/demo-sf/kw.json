@@ -1,0 +1,713 @@
+[
+ {
+  "wort": "brettsperrholz",
+  "codes": [
+   "HOLZ"
+  ]
+ },
+ {
+  "wort": "holzrahmen",
+  "codes": [
+   "HOLZ"
+  ]
+ },
+ {
+  "wort": "holztafel",
+  "codes": [
+   "HOLZ"
+  ]
+ },
+ {
+  "wort": "konstruktionsvollholz",
+  "codes": [
+   "HOLZ"
+  ]
+ },
+ {
+  "wort": "brettschichtholz",
+  "codes": [
+   "HOLZ"
+  ]
+ },
+ {
+  "wort": "holzmodul",
+  "codes": [
+   "HOLZ"
+  ]
+ },
+ {
+  "wort": "zellulosedämmung",
+  "codes": [
+   "HOLZ"
+  ]
+ },
+ {
+  "wort": "holzfaserdämm",
+  "codes": [
+   "HOLZ"
+  ]
+ },
+ {
+  "wort": "dachabdichtung",
+  "codes": [
+   "DACH"
+  ]
+ },
+ {
+  "wort": "dachrinne",
+  "codes": [
+   "DACH"
+  ]
+ },
+ {
+  "wort": "fallrohr",
+  "codes": [
+   "DACH"
+  ]
+ },
+ {
+  "wort": "attikaabdeckung",
+  "codes": [
+   "DACH"
+  ]
+ },
+ {
+  "wort": "extensive dachbegrünung",
+  "codes": [
+   "DACH"
+  ]
+ },
+ {
+  "wort": "dachziegel",
+  "codes": [
+   "DACH"
+  ]
+ },
+ {
+  "wort": "wärmedämmverbund",
+  "codes": [
+   "FAS"
+  ]
+ },
+ {
+  "wort": "außenputz",
+  "codes": [
+   "FAS"
+  ]
+ },
+ {
+  "wort": "fassadenbekleidung",
+  "codes": [
+   "FAS"
+  ]
+ },
+ {
+  "wort": "fenster",
+  "codes": [
+   "FEN"
+  ]
+ },
+ {
+  "wort": "hauseingangstür",
+  "codes": [
+   "FEN"
+  ]
+ },
+ {
+  "wort": "raffstore",
+  "codes": [
+   "SON"
+  ]
+ },
+ {
+  "wort": "rollladen",
+  "codes": [
+   "SON"
+  ]
+ },
+ {
+  "wort": "außenjalousie",
+  "codes": [
+   "SON"
+  ]
+ },
+ {
+  "wort": "bodenplatte",
+  "codes": [
+   "ROH"
+  ]
+ },
+ {
+  "wort": "streifenfundament",
+  "codes": [
+   "ROH"
+  ]
+ },
+ {
+  "wort": "mauerwerk",
+  "codes": [
+   "ROH"
+  ]
+ },
+ {
+  "wort": "stahlbeton",
+  "codes": [
+   "ROH"
+  ]
+ },
+ {
+  "wort": "perimeterdämmung",
+  "codes": [
+   "ROH"
+  ]
+ },
+ {
+  "wort": "oberboden abtragen",
+  "codes": [
+   "ERD"
+  ]
+ },
+ {
+  "wort": "baugrube",
+  "codes": [
+   "ERD"
+  ]
+ },
+ {
+  "wort": "verfüllen",
+  "codes": [
+   "ERD"
+  ]
+ },
+ {
+  "wort": "grundleitung",
+  "codes": [
+   "KAN"
+  ]
+ },
+ {
+  "wort": "revisionsschacht",
+  "codes": [
+   "KAN"
+  ]
+ },
+ {
+  "wort": "bauwerksabdichtung",
+  "codes": [
+   "ABD"
+  ]
+ },
+ {
+  "wort": "gipskarton",
+  "codes": [
+   "TRO"
+  ]
+ },
+ {
+  "wort": "gipsfaser",
+  "codes": [
+   "TRO"
+  ]
+ },
+ {
+  "wort": "metallständerwand",
+  "codes": [
+   "TRO"
+  ]
+ },
+ {
+  "wort": "abhangdecke",
+  "codes": [
+   "TRO"
+  ]
+ },
+ {
+  "wort": "akustikdecke",
+  "codes": [
+   "TRO"
+  ]
+ },
+ {
+  "wort": "innenputz",
+  "codes": [
+   "PUTZ"
+  ]
+ },
+ {
+  "wort": "zementestrich",
+  "codes": [
+   "EST"
+  ]
+ },
+ {
+  "wort": "calciumsulfatestrich",
+  "codes": [
+   "EST"
+  ]
+ },
+ {
+  "wort": "trittschalldämmung",
+  "codes": [
+   "EST"
+  ]
+ },
+ {
+  "wort": "wandfliesen",
+  "codes": [
+   "FLI"
+  ]
+ },
+ {
+  "wort": "bodenfliesen",
+  "codes": [
+   "FLI"
+  ]
+ },
+ {
+  "wort": "dispersionsanstrich",
+  "codes": [
+   "MAL"
+  ]
+ },
+ {
+  "wort": "lasur",
+  "codes": [
+   "MAL"
+  ]
+ },
+ {
+  "wort": "tapete",
+  "codes": [
+   "MAL"
+  ]
+ },
+ {
+  "wort": "raufaser",
+  "codes": [
+   "MAL"
+  ]
+ },
+ {
+  "wort": "linoleum",
+  "codes": [
+   "BOD"
+  ]
+ },
+ {
+  "wort": "kautschuk",
+  "codes": [
+   "BOD"
+  ]
+ },
+ {
+  "wort": "parkett",
+  "codes": [
+   "BOD"
+  ]
+ },
+ {
+  "wort": "sockelleiste",
+  "codes": [
+   "BOD"
+  ]
+ },
+ {
+  "wort": "innentür",
+  "codes": [
+   "TIS"
+  ]
+ },
+ {
+  "wort": "zarge",
+  "codes": [
+   "TIS"
+  ]
+ },
+ {
+  "wort": "fensterbank innen",
+  "codes": [
+   "TIS"
+  ]
+ },
+ {
+  "wort": "treppengeländer",
+  "codes": [
+   "MET"
+  ]
+ },
+ {
+  "wort": "handlauf",
+  "codes": [
+   "MET"
+  ]
+ },
+ {
+  "wort": "gitterrost",
+  "codes": [
+   "MET"
+  ]
+ },
+ {
+  "wort": "schließzylinder",
+  "codes": [
+   "SL"
+  ]
+ },
+ {
+  "wort": "generalhauptschlüssel",
+  "codes": [
+   "SL"
+  ]
+ },
+ {
+  "wort": "bauendreinigung",
+  "codes": [
+   "REIN"
+  ]
+ },
+ {
+  "wort": "feinreinigung",
+  "codes": [
+   "REIN"
+  ]
+ },
+ {
+  "wort": "waschtisch",
+  "codes": [
+   "SAN"
+  ]
+ },
+ {
+  "wort": "wc-anlage",
+  "codes": [
+   "SAN"
+  ]
+ },
+ {
+  "wort": "trinkwasser",
+  "codes": [
+   "SAN"
+  ]
+ },
+ {
+  "wort": "abwasserleitung",
+  "codes": [
+   "SAN"
+  ]
+ },
+ {
+  "wort": "vorwandinstallation",
+  "codes": [
+   "SAN"
+  ]
+ },
+ {
+  "wort": "wärmepumpe",
+  "codes": [
+   "HZG"
+  ]
+ },
+ {
+  "wort": "fußbodenheizung",
+  "codes": [
+   "HZG"
+  ]
+ },
+ {
+  "wort": "heizkörper",
+  "codes": [
+   "HZG"
+  ]
+ },
+ {
+  "wort": "pufferspeicher",
+  "codes": [
+   "HZG"
+  ]
+ },
+ {
+  "wort": "lüftungsgerät",
+  "codes": [
+   "RLT"
+  ]
+ },
+ {
+  "wort": "wärmerückgewinnung",
+  "codes": [
+   "RLT"
+  ]
+ },
+ {
+  "wort": "luftkanal",
+  "codes": [
+   "RLT"
+  ]
+ },
+ {
+  "wort": "brandschutzklappe",
+  "codes": [
+   "RLT"
+  ]
+ },
+ {
+  "wort": "unterverteilung",
+  "codes": [
+   "ELT"
+  ]
+ },
+ {
+  "wort": "steckdose",
+  "codes": [
+   "ELT"
+  ]
+ },
+ {
+  "wort": "leuchte",
+  "codes": [
+   "ELT"
+  ]
+ },
+ {
+  "wort": "mantelleitung",
+  "codes": [
+   "ELT"
+  ]
+ },
+ {
+  "wort": "sicherheitsbeleuchtung",
+  "codes": [
+   "ELT"
+  ]
+ },
+ {
+  "wort": "photovoltaik",
+  "codes": [
+   "PV"
+  ]
+ },
+ {
+  "wort": "pv-modul",
+  "codes": [
+   "PV"
+  ]
+ },
+ {
+  "wort": "wechselrichter",
+  "codes": [
+   "PV"
+  ]
+ },
+ {
+  "wort": "fangeinrichtung",
+  "codes": [
+   "BLITZ"
+  ]
+ },
+ {
+  "wort": "erdungsanlage",
+  "codes": [
+   "BLITZ"
+  ]
+ },
+ {
+  "wort": "fundamenterder",
+  "codes": [
+   "BLITZ"
+  ]
+ },
+ {
+  "wort": "brandmelde",
+  "codes": [
+   "FM"
+  ]
+ },
+ {
+  "wort": "rauchwarnmelder",
+  "codes": [
+   "FM"
+  ]
+ },
+ {
+  "wort": "datenverkabelung",
+  "codes": [
+   "FM"
+  ]
+ },
+ {
+  "wort": "netzwerkdose",
+  "codes": [
+   "FM"
+  ]
+ },
+ {
+  "wort": "klingelanlage",
+  "codes": [
+   "FM"
+  ]
+ },
+ {
+  "wort": "aufzug",
+  "codes": [
+   "AUF"
+  ]
+ },
+ {
+  "wort": "raumregelung",
+  "codes": [
+   "GLT"
+  ]
+ },
+ {
+  "wort": "gebäudeleittechnik",
+  "codes": [
+   "GLT"
+  ]
+ },
+ {
+  "wort": "pflaster",
+  "codes": [
+   "AUS"
+  ]
+ },
+ {
+  "wort": "rasen",
+  "codes": [
+   "AUS"
+  ]
+ },
+ {
+  "wort": "zaunanlage",
+  "codes": [
+   "AUS"
+  ]
+ },
+ {
+  "wort": "baumpflanzung",
+  "codes": [
+   "AUS"
+  ]
+ },
+ {
+  "wort": "spielgerät",
+  "codes": [
+   "SPIEL"
+  ]
+ },
+ {
+  "wort": "fallschutz",
+  "codes": [
+   "SPIEL"
+  ]
+ },
+ {
+  "wort": "sandspielbereich",
+  "codes": [
+   "SPIEL"
+  ]
+ },
+ {
+  "wort": "arbeitsgerüst",
+  "codes": [
+   "GER"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "schutzgerüst",
+  "codes": [
+   "GER"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "fassadengerüst",
+  "codes": [
+   "GER"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "fanggerüst",
+  "codes": [
+   "GER"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "raumgerüst",
+  "codes": [
+   "GER"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "gerüstvorhaltung",
+  "codes": [
+   "GER"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "kernbohrung",
+  "codes": [
+   "BOHR"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "durchbruch",
+  "codes": [
+   "BOHR"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "brandschutzabschottung",
+  "codes": [
+   "TRO"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "abschottung",
+  "codes": [
+   "TRO"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "rohrdämmung",
+  "codes": [
+   "DÄM"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "dämmung von rohrleitungen",
+  "codes": [
+   "DÄM"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "elektrischer anschluss",
+  "codes": [
+   "ELT"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "potentialausgleich",
+  "codes": [
+   "ELT"
+  ],
+  "schnitt": true
+ },
+ {
+  "wort": "fundament für",
+  "codes": [
+   "ROH"
+  ],
+  "schnitt": true
+ }
+]

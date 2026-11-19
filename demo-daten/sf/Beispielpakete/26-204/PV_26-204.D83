@@ -1,0 +1,20 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02PV                                                                      000003
+03Stadt Beispielstadt (Demo)                                              000004
+114                                                                       000005
+12Los 4 Technische GebÑudeausrÅstung                                      000006
+114.05                                                                    000007
+12Photovoltaikanlage                                                      000008
+214.05.0010            00000149000St                                      000009
+25PV-Modul monokristallin 420 Wp                                          000010
+26   PV-Module auf AufstÑnderung fÅr GrÅndach.                            000011
+214.05.0020            00000001000St                                      000012
+25Wechselrichter 30 kW                                                    000013
+26   String-Wechselrichter inkl. Montage.                                 000014
+214.05.0030            00000223000m2                                      000015
+25Unterkonstruktion GrÅndach, ballastiert                                 000016
+26   AufstÑnderung ohne Durchdringung der Abdichtung.                     000017
+314.05                                                                    000018
+314                                                                       000019
+99                                                                   00003000020

@@ -1,0 +1,17 @@
+00           26-204                                                       000001
+01Grundschule Erweiterung in Holzmodulbau 20.06.26                        000002
+02EST                                                                     000003
+03Stadt Beispielstadt (Demo)                                              000004
+113                                                                       000005
+12Los 3 Ausbau                                                            000006
+113.02                                                                    000007
+12Estricharbeiten                                                         000008
+213.02.0010            00001127000m2                                      000009
+25Calciumsulfatestrich 50 mm auf D„mmung                                  000010
+26   Flieáestrich als Heizestrich auf Trittschalld„mmung.                 000011
+213.02.0020            00000110000m2                                      000012
+25Zementestrich im Nassbereich                                            000013
+26   Zementestrich mit Gef„lle in Nassr„umen.                             000014
+313.02                                                                    000015
+313                                                                       000016
+99                                                                   00002000017

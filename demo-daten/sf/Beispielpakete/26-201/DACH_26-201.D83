@@ -1,0 +1,23 @@
+00           26-201                                                       000001
+01Wohnhaus 8 WE in Holzrahmenbau          20.06.26                        000002
+02DACH                                                                    000003
+03Wohnungsbau Musterstadt eG (Demo)                                       000004
+111                                                                       000005
+12Los 1 Rohbau und Holzbau                                                000006
+111.06                                                                    000007
+12Dachabdichtung und GrÅndach                                             000008
+211.06.0010            00000777000m2                                      000009
+25Extensive DachbegrÅnung                                                 000010
+26   Extensive DachbegrÅnung mit Substrat 10 cm und Sedum.                000011
+211.06.0020            00000239000m                                       000012
+25Attikaabdeckung Aluminium                                               000013
+26   Attikaabdeckung aus Aluminium, Zuschnitt 400 mm.                     000014
+211.06.0030            00000055000m                                       000015
+25Dachrinne und Fallrohr Titanzink                                        000016
+26   DachentwÑsserung aus Titanzink liefern und montieren.                000017
+211.06.0040            00000020000St                                      000018
+25Absturzsicherung Anschlagpunkte                                         000019
+26   Einzelanschlagpunkte nach DIN EN 795 setzen.                         000020
+311.06                                                                    000021
+311                                                                       000022
+99                                                                   00004000023
