@@ -1,0 +1,18 @@
+00           26-002                                                       000001
+01Deckenerneuerung Abschnitt 2            20.03.26                        000002
+02SCHšTT                                                                  000003
+03Landesbetrieb Straáenbau (Demo)                                         000004
+1102                                                                      000005
+12Fahrbahn                                                                000006
+2102 0090              00000711000t                                       000007
+25Boden entsorgen, Z 1.1                                                  000008
+26   Belasteten Boden laden, abfahren und zur zugelassenen Deponie verbrin000009
+26   gen.                                                                 000010
+3102                                                                      000011
+1103                                                                      000012
+12Ausstattung und Nebenarbeiten                                           000013
+2103 0050              00000169000m3                                      000014
+25Schottertragschicht 0/45 liefern und einbauen                           000015
+26   Mineralgemisch liefern, lagenweise einbauen und verdichten.          000016
+3103                                                                      000017
+99                                                                   00002000018

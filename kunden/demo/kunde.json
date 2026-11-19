@@ -1,0 +1,596 @@
+{
+ "name": "Musterbau GmbH",
+ "slug": "demo",
+ "login": "demo",
+ "farben": {
+  "primaer": "#1f4e79",
+  "akzent": "#e8772e"
+ },
+ "logo": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgODAiIHdpZHRoPSIzNjAiIGhlaWdodD0iODAiPgo8cmVjdCB4PSI0IiB5PSIxNCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTAiIGZpbGw9IiMxRjRFNzkiLz4KPHBhdGggZD0iTTE2IDU0IEwzMCAyNiBMNDQgNTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0U4NzcyRSIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHRleHQgeD0iNzAiIHk9IjUwIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGNEU3OSIgbGV0dGVyLXNwYWNpbmc9IjEiPk1VU1RFUkJBVTwvdGV4dD4KPHRleHQgeD0iNzIiIHk9IjY4IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzVENkI3RSIgbGV0dGVyLXNwYWNpbmc9IjMiPkdNQkggwrcgREVNTzwvdGV4dD4KPC9zdmc+Cg==",
+ "favicon": "",
+ "sperre": {
+  "text": "nicht mehr anfragen",
+  "bis": "2026-12-31"
+ },
+ "pakete": {
+  "Paket_1": "Paket_1 · Deckenerneuerung Abschnitt 1",
+  "Paket_2": "Paket_2 · Deckenerneuerung Abschnitt 2",
+  "Paket_3": "Paket_3 · Deckenerneuerung Abschnitt 3",
+  "Paket_4": "Paket_4 · Deckenerneuerung Abschnitt 4",
+  "Paket_5": "Paket_5 · Deckenerneuerung Abschnitt 5"
+ },
+ "onboarding": {
+  "version": 1,
+  "stand": "2026-11-19",
+  "gewerke": [
+   {
+    "code": "BAU",
+    "name": "Baustoffe",
+    "stichwoerter": [
+     "baustoffe",
+     "betonwaren",
+     "betonsteine",
+     "pflastersteine",
+     "schachtteile",
+     "betonrohre",
+     "kunststoffrohre",
+     "entwässerungsrinnen",
+     "geotextil",
+     "geogitter",
+     "geokunststoffe"
+    ],
+    "radius": 80
+   },
+   {
+    "code": "MG",
+    "name": "Mischgut + Fräsgut",
+    "stichwoerter": [
+     "mischgut",
+     "asphaltzusätze"
+    ],
+    "radius": 40
+   },
+   {
+    "code": "SCHÜTT",
+    "name": "Schüttgüter + Entsorgung",
+    "stichwoerter": [
+     "schüttgüter",
+     "entsorgung",
+     "bodenentsorgung",
+     "deponie",
+     "sand",
+     "bodenlieferung"
+    ],
+    "radius": 50
+   },
+   {
+    "code": "VS",
+    "name": "Verkehrssicherung",
+    "stichwoerter": [
+     "verkehrssicherung",
+     "absperr",
+     "ampelverleih",
+     "led-vorwarntafeln"
+    ],
+    "radius": 100
+   },
+   {
+    "code": "MARK",
+    "name": "Markierung",
+    "stichwoerter": [
+     "markierung",
+     "demarkierung",
+     "roadmarker",
+     "glasmarker"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "FUG",
+    "name": "Fugen",
+    "stichwoerter": [
+     "fugen",
+     "nähte",
+     "schneiden (asphalt)"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "ANSPR",
+    "name": "Anspritzen",
+    "stichwoerter": [
+     "anspritzarbeiten",
+     "bitumenemulsion",
+     "asphaltarmierung"
+    ],
+    "radius": 100
+   },
+   {
+    "code": "ARM",
+    "name": "Armierung",
+    "stichwoerter": [
+     "asphaltarmierung"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "TEER",
+    "name": "teerhaltiges Material",
+    "stichwoerter": [
+     "pech-/teerhaltiges",
+     "teeruntersuchung"
+    ],
+    "radius": 100
+   },
+   {
+    "code": "BÜRO",
+    "name": "Baubüro",
+    "stichwoerter": [
+     "baubüro",
+     "wc-mietservice"
+    ],
+    "radius": 100
+   },
+   {
+    "code": "BESCH",
+    "name": "Beschilderung",
+    "stichwoerter": [
+     "verkehrszeichen"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "GEL",
+    "name": "Geländer",
+    "stichwoerter": [
+     "geländer"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "KAMPF",
+    "name": "Kampfmittel",
+    "stichwoerter": [
+     "kampfmittel"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "BETON",
+    "name": "Betonwaren",
+    "stichwoerter": [
+     "betonwaren",
+     "betonsteine",
+     "fertigteile",
+     "betonteile"
+    ],
+    "radius": 100
+   },
+   {
+    "code": "PFLASTER",
+    "name": "Pflasterarbeiten",
+    "stichwoerter": [
+     "pflaster"
+    ],
+    "radius": 80
+   },
+   {
+    "code": "KANAL",
+    "name": "Kanaluntersuchung",
+    "stichwoerter": [
+     "kanal-",
+     "kanal-tv",
+     "kanal-inspektion",
+     "kanal-untersuchung",
+     "kanal-dichtheit",
+     "kanal-reinigung"
+    ],
+    "radius": 100
+   },
+   {
+    "code": "KANALBAU",
+    "name": "Offene Kanalbauarbeiten",
+    "stichwoerter": [
+     "kanalbau",
+     "leitungsbau",
+     "rohrleitungsbau"
+    ],
+    "radius": 80
+   },
+   {
+    "code": "INLINER",
+    "name": "Inliner",
+    "stichwoerter": [
+     "kanalsanierung",
+     "schlauchliner",
+     "inliner",
+     "rohrsanierung"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "SCHUTZ",
+    "name": "Schutzplanken",
+    "stichwoerter": [
+     "schutzplanken",
+     "stahlschutzwand",
+     "schutzeinrichtungen"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "BANK",
+    "name": "Bankette",
+    "stichwoerter": [
+     "bankett"
+    ],
+    "radius": 100
+   },
+   {
+    "code": "BAUFELD",
+    "name": "Baufeldräumung + Baumschutz",
+    "stichwoerter": [
+     "baufeldräumung",
+     "baumfällung",
+     "rodung",
+     "baumschutz",
+     "gehölzpflege"
+    ],
+    "radius": 80
+   },
+   {
+    "code": "BAUM",
+    "name": "Baumfachliche Baubegleitung",
+    "stichwoerter": [
+     "baubegleitung (baumschutzfachlich)",
+     "baumgutachten"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "EPS",
+    "name": "Eichenprozessionsspinner",
+    "stichwoerter": [
+     "eichenprozessionsspinner",
+     "schädlingsbekämpfung"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "LEIT",
+    "name": "Leitpfosten",
+    "stichwoerter": [
+     "leitpfosten"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "FÜ",
+    "name": "Fahrbahnübergänge",
+    "stichwoerter": [
+     "fahrbahnübergänge",
+     "dehnfugen"
+    ],
+    "radius": 300
+   },
+   {
+    "code": "BW",
+    "name": "Bauwerk",
+    "stichwoerter": [
+     "bauwerk",
+     "betonsanierung",
+     "abdichtungen"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "GUSS",
+    "name": "Gussasphalt",
+    "stichwoerter": [
+     "gussasphalt"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "FILTER",
+    "name": "Filtersubstratrinnen",
+    "stichwoerter": [
+     "entwässerungsrinnen",
+     "abscheidetechnik"
+    ],
+    "radius": 300
+   },
+   {
+    "code": "MÖRTEL",
+    "name": "Vermörtelung",
+    "stichwoerter": [
+     "mörtel",
+     "fugenmörtel"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "AUS",
+    "name": "Ausstattung",
+    "stichwoerter": [
+     "ausstattung"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "ENT",
+    "name": "Entsorgung",
+    "stichwoerter": [
+     "entsorgung",
+     "deponie"
+    ],
+    "radius": 50
+   },
+   {
+    "code": "GAB",
+    "name": "Gabionen",
+    "stichwoerter": [
+     "gabionen"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "SIGEKO",
+    "name": "SiGeKo",
+    "stichwoerter": [
+     "sigeko"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "IND",
+    "name": "Induktionsschleifen",
+    "stichwoerter": [
+     "induktionsschleifen"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "GRIFF",
+    "name": "Griffigkeitsmessung",
+    "stichwoerter": [
+     "griffigkeit",
+     "scrimmessung"
+    ],
+    "radius": 300
+   },
+   {
+    "code": "PROB",
+    "name": "Proben",
+    "stichwoerter": [
+     "proben",
+     "prüfungen",
+     "asphaltprüfungen",
+     "beprobung"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "MO",
+    "name": "Mobile Schrankenanlage",
+    "stichwoerter": [
+     "absperrschranke",
+     "toranlagen (schrankenanlagen)"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "MAST",
+    "name": "Maste",
+    "stichwoerter": [
+     "maste",
+     "mastleuchten"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "LSA",
+    "name": "Lichtsignalanlagen",
+    "stichwoerter": [
+     "lichtsignalanlagen",
+     "ampelverleih",
+     "signalbau"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "ELEKTRO",
+    "name": "Elektroarbeiten",
+    "stichwoerter": [
+     "elektroarbeiten",
+     "kabelarbeiten",
+     "straßenbeleuchtung",
+     "beleuchtung"
+    ],
+    "radius": 100
+   },
+   {
+    "code": "GRÜND",
+    "name": "Gründung",
+    "stichwoerter": [
+     "pfahlgründung",
+     "tiefgründung",
+     "bohrpfähle",
+     "spezialtiefbau"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "FUND",
+    "name": "Betonfundamente",
+    "stichwoerter": [
+     "streifenfundamente",
+     "betonarbeiten",
+     "ortbeton"
+    ],
+    "radius": 100
+   },
+   {
+    "code": "METALL",
+    "name": "Metallbau",
+    "stichwoerter": [
+     "metallbau",
+     "stahlbau"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "HÜLL",
+    "name": "Hüllrohre",
+    "stichwoerter": [
+     "kunststoffrohre",
+     "kabelarbeiten"
+    ],
+    "radius": 150
+   },
+   {
+    "code": "ERSCHÜTT",
+    "name": "Erschütterungsmessung",
+    "stichwoerter": [
+     "erschütterungsmessung",
+     "schwingungsmessung",
+     "beweissicherung"
+    ],
+    "radius": 200
+   },
+   {
+    "code": "ABFALL",
+    "name": "Abfallbehälter",
+    "stichwoerter": [
+     "abfallbehälter"
+    ],
+    "radius": 300
+   }
+  ],
+  "alias": {
+   "ANS": "ANSPR",
+   "ANSPNA": "ANSPR",
+   "BS": "BAU",
+   "BÜR": "BÜRO",
+   "BÜROC": "BÜRO",
+   "FU": "FUG",
+   "MAR": "MARK",
+   "MISCH": "MG",
+   "SG": "SCHÜTT",
+   "BA": "BANK",
+   "UNTER": "KANAL",
+   "VZ": "BESCH"
+  },
+  "ignore": [],
+  "lieferantenDatei": "Lieferantenliste_Musterbau.xlsx",
+  "pakete": [
+   {
+    "id": "Paket_1",
+    "label": "Paket_1 · Deckenerneuerung Abschnitt 1",
+    "datei": "26-001.D83",
+    "codes": {
+     "BAUFELD": 1,
+     "BAU": 2,
+     "BESCH": 1,
+     "BÜRO": 2,
+     "ELEKTRO": 1,
+     "FUG": 2,
+     "KAMPF": 1,
+     "KANALBAU": 2,
+     "LEIT": 1,
+     "MARK": 3,
+     "MG": 1,
+     "PROB": 1,
+     "SCHÜTT": 3,
+     "VS": 3
+    }
+   },
+   {
+    "id": "Paket_2",
+    "label": "Paket_2 · Deckenerneuerung Abschnitt 2",
+    "datei": "26-002.D83",
+    "codes": {
+     "ANSPR": 1,
+     "BAUFELD": 2,
+     "BAU": 2,
+     "BÜRO": 1,
+     "FUG": 1,
+     "GEL": 1,
+     "KAMPF": 1,
+     "KANALBAU": 1,
+     "LEIT": 1,
+     "MARK": 4,
+     "MG": 1,
+     "SCHUTZ": 1,
+     "SCHÜTT": 2,
+     "VS": 3
+    }
+   },
+   {
+    "id": "Paket_3",
+    "label": "Paket_3 · Deckenerneuerung Abschnitt 3",
+    "datei": "26-003.D83",
+    "codes": {
+     "BAUFELD": 2,
+     "BAU": 2,
+     "BESCH": 1,
+     "BÜRO": 1,
+     "ELEKTRO": 1,
+     "FUG": 2,
+     "GEL": 1,
+     "KAMPF": 1,
+     "KANALBAU": 2,
+     "LEIT": 1,
+     "MARK": 3,
+     "MG": 2,
+     "SCHUTZ": 2,
+     "SCHÜTT": 1,
+     "VS": 2
+    }
+   },
+   {
+    "id": "Paket_4",
+    "label": "Paket_4 · Deckenerneuerung Abschnitt 4",
+    "datei": "26-004.D83",
+    "codes": {
+     "ANSPR": 1,
+     "BAUFELD": 2,
+     "BAU": 3,
+     "BESCH": 1,
+     "BÜRO": 2,
+     "ELEKTRO": 1,
+     "FUG": 3,
+     "GEL": 1,
+     "KAMPF": 1,
+     "KANALBAU": 1,
+     "LEIT": 1,
+     "MARK": 4,
+     "MG": 1,
+     "SCHUTZ": 2,
+     "SCHÜTT": 1,
+     "VS": 3
+    }
+   },
+   {
+    "id": "Paket_5",
+    "label": "Paket_5 · Deckenerneuerung Abschnitt 5",
+    "datei": "26-005.D83",
+    "codes": {
+     "ANSPR": 1,
+     "BAU": 2,
+     "BESCH": 1,
+     "BÜRO": 2,
+     "ELEKTRO": 1,
+     "FUG": 3,
+     "KAMPF": 1,
+     "KANALBAU": 2,
+     "MARK": 2,
+     "MG": 2,
+     "SCHUTZ": 1,
+     "SCHÜTT": 3,
+     "VS": 2
+    }
+   }
+  ]
+ }
+}

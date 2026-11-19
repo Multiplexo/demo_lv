@@ -1,0 +1,123 @@
+00           26-004                                                       000001
+01Deckenerneuerung Abschnitt 4            15.03.26                        000002
+02Deckenerneuerung Abschnitt 4                                            000003
+03Gemeinde Musterdorf                                                     000004
+1101                                                                      000005
+12Baustelleneinrichtung und Verkehrssicherung                             000006
+2101 0010              00000001000psch                                    000007
+25Baustelle einrichten                                                    000008
+26   Baustelleneinrichtung fÅr sÑmtliche Leistungen herstellen, vorhalten 000009
+26   und nach Abschluss rÑumen.                                           000010
+2101 0020              00002646000m2                                      000011
+25Asphalttragschicht AC 32 T S, 14 cm                                     000012
+26   Asphalttragschicht herstellen und verdichten.                        000013
+2101 0030              00000030000Wo                                      000014
+25SanitÑrcontainer vorhalten                                              000015
+26   WC-Container mit Waschgelegenheit vorhalten und reinigen.            000016
+2101 0040              00000001000psch                                    000017
+25Verkehrssicherung Arbeitsstelle kÅrzerer Dauer                          000018
+26   Verkehrssicherung nach RSA 21 einrichten, vorhalten, umsetzen und rÑu000019
+26   men.                                                                 000020
+2101 0050              00001480000m2                                      000021
+25Kampfmittelsondierung FlÑche                                            000022
+26   FlÑche vor Beginn der Erdarbeiten auf Kampfmittel sondieren.         000023
+2101 0060              00000020000Wo                                      000024
+25BaubÅro vorhalten                                                       000025
+26   BÅrocontainer mit Einrichtung, Heizung und Stromanschluss vorhalten. 000026
+2101 0070              00001350000Std                                     000027
+25Absperrschranke 1.6 m vorhalten                                         000028
+26   Absperrschranken mit Fu· und Warnleuchte vorhalten.                  000029
+2101 0080              00000060000d                                       000030
+25Transportable Lichtsignalanlage vorhalten                               000031
+26   Transp. LSA mit zwei Signalgebern, verkehrsabhÑngig gesteuert, vorhal000032
+26   ten.                                                                 000033
+3101                                                                      000034
+1102                                                                      000035
+12Fahrbahn                                                                000036
+2102 0010              00002373000m2                                      000037
+25Planum herstellen                                                       000038
+26   Planum profilgerecht herstellen und verdichten, Ev2 mindestens 45 MN/000039
+26   m2.                                                                  000040
+2102 0020              00002058000m2                                      000041
+25Asphaltbefestigung frÑsen, Dicke 8 cm                                   000042
+26   Asphaltschichten profilgerecht frÑsen, FrÑsgut laden und abfahren.   000043
+2102 0030              00000001000psch                                    000044
+25Baustelle rÑumen                                                        000045
+26   GerÑte, Anlagen und Einrichtungen von der Baustelle entfernen, FlÑche000046
+26   n in den ursprÅnglichen Zustand versetzen.                           000047
+2102 0040              00001237000m2                                      000048
+25Asphaltdeckschicht AC 11 D S einbauen, 3 cm                             000049
+26   Asphaltdeckschicht nach ZTV Asphalt-StB herstellen, einschlie·lich Ve000050
+26   rdichten.                                                            000051
+2102 0050              00001846000m2                                      000052
+25Geotextil GRK 3 liefern                                                 000053
+26   Geotextil als Trenn- und Filterlage liefern.                         000054
+2102 0060              00000490000m2                                      000055
+25Betonpflaster 8 cm liefern                                              000056
+26   Betonsteinpflaster grau liefern, frei Baustelle.                     000057
+2102 0070              00001035000t                                       000058
+25Mischgut AC 16 liefern                                                  000059
+26   Asphaltmischgut ab Werk liefern, Temperatur nach TL Asphalt-StB.     000060
+2102 0080              00000126000m                                       000061
+25GelÑnder HolmgelÑnder herstellen                                        000062
+26   GelÑnder aus Stahl, feuerverzinkt, auf Fundament montieren.          000063
+2102 0090              00000061000St                                      000064
+25Leitpfosten aufstellen                                                  000065
+26   Leitpfosten aus Kunststoff mit Reflektor aufstellen.                 000066
+2102 0100              00000012000St                                      000067
+25Baum fÑllen, Stammdurchmesser 50 cm                                     000068
+26   BaumfÑllung einschlie·lich Wurzelstock roden und entsorgen.          000069
+2102 0110              00003796000m2                                      000070
+25Haftkleber auf FrÑsflÑche aufbringen                                    000071
+26   Anspritzen der gefrÑsten FlÑche mit polymermodifizierter Emulsion.   000072
+2102 0120              00000180000m                                       000073
+25EntwÑsserungsrinne Kastenrinne liefern                                  000074
+26   EntwÑsserungsrinne Klasse D 400 liefern.                             000075
+2102 0130              00000753000m3                                      000076
+25Frostschutzmaterial liefern                                             000077
+26   Frostschutzmaterial 0/32 liefern und einbauen.                       000078
+3102                                                                      000079
+1103                                                                      000080
+12Ausstattung und Nebenarbeiten                                           000081
+2103 0010              00000535000m                                       000082
+25Markierung demarkieren                                                  000083
+26   Vorhandene Markierung durch FrÑsen oder Strahlen restlos entfernen.  000084
+2103 0020              00000004000St                                      000085
+25Pfeilmarkierung Geradeaus, 5 m                                          000086
+26   Richtungspfeil nach RMS herstellen.                                  000087
+2103 0030              00000063000m                                       000088
+25Asphalt schneiden, Tiefe bis 10 cm                                      000089
+26   Asphalt mit Fugenschneider gerade und senkrecht schneiden.           000090
+2103 0040              00000004000St                                      000091
+25Hausanschlussleitung herstellen                                         000092
+26   GrundstÅcksanschluss DN 150 an Hauptkanal anschlie·en.               000093
+2103 0050              00000492000m                                       000094
+25Nahtband an Anschlussfugen aufbringen                                   000095
+26   Bitumenhaltiges Nahtband an NÑhten und AnschlÅssen aufbringen.       000096
+2103 0060              00000012000St                                      000097
+25Verkehrszeichen 205 aufstellen                                          000098
+26   Verkehrszeichen RA 2 mit Pfosten und Fundament aufstellen.           000099
+2103 0070              00000173000m                                       000100
+25Schutzplanke demontieren                                                000101
+26   Vorhandene Schutzplanke einschlie·lich Pfosten zurÅckbauen.          000102
+2103 0080              00001200000m                                       000103
+25Fuge vergie·en, hei· verarbeitbar                                       000104
+26   Fugen zwischen Asphalt und Einbauten mit Fugenmasse vergie·en.       000105
+2103 0090              00000941000m                                       000106
+25Fahrstreifenbegrenzung 25 cm, Hei·plastik                               000107
+26   Durchgehende Linie herstellen, einschlie·lich Vorvermessung.         000108
+2103 0100              00000006000St                                      000109
+25Stra·enbeleuchtung umsetzen                                             000110
+26   Mast mit Leuchte demontieren und an neuer Stelle aufbauen, Kabelarbei000111
+26   ten.                                                                 000112
+2103 0110              00000473000m                                       000113
+25Schutzplanke Stahlschutzwand herstellen                                 000114
+26   Fahrzeug-RÅckhaltesystem nach Systemzulassung aufstellen.            000115
+2103 0120              00000003000St                                      000116
+25Baumschutz herstellen                                                   000117
+26   Stammschutz mit Bohlenummantelung herstellen und vorhalten.          000118
+2103 0130              00001479000m                                       000119
+25Leitlinie 15 cm, wei·, Farbe                                            000120
+26   Fahrbahnmarkierung als Leitlinie nach RMS herstellen, Typ II.        000121
+3103                                                                      000122
+99                                                                   00034000123

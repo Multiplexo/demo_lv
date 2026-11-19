@@ -1,0 +1,19 @@
+00           26-004                                                       000001
+01Deckenerneuerung Abschnitt 4            20.03.26                        000002
+02VS                                                                      000003
+03Gemeinde Musterdorf                                                     000004
+1101                                                                      000005
+12Baustelleneinrichtung und Verkehrssicherung                             000006
+2101 0040              00000001000psch                                    000007
+25Verkehrssicherung Arbeitsstelle kÅrzerer Dauer                          000008
+26   Verkehrssicherung nach RSA 21 einrichten, vorhalten, umsetzen und rÑu000009
+26   men.                                                                 000010
+2101 0070              00001350000Std                                     000011
+25Absperrschranke 1.6 m vorhalten                                         000012
+26   Absperrschranken mit Fu· und Warnleuchte vorhalten.                  000013
+2101 0080              00000060000d                                       000014
+25Transportable Lichtsignalanlage vorhalten                               000015
+26   Transp. LSA mit zwei Signalgebern, verkehrsabhÑngig gesteuert, vorhal000016
+26   ten.                                                                 000017
+3101                                                                      000018
+99                                                                   00003000019

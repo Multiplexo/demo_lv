@@ -1,0 +1,21 @@
+00           26-001                                                       000001
+01Deckenerneuerung Abschnitt 1            20.03.26                        000002
+02SCHšTT                                                                  000003
+03Stadt Musterstadt                                                       000004
+1102                                                                      000005
+12Fahrbahn                                                                000006
+2102 0020              00000651000m3                                      000007
+25Frostschutzmaterial liefern                                             000008
+26   Frostschutzmaterial 0/32 liefern und einbauen.                       000009
+2102 0040              00000223000t                                       000010
+25Boden entsorgen, Z 2                                                    000011
+26   Belasteten Boden laden, abfahren und zur zugelassenen Deponie verbrin000012
+26   gen.                                                                 000013
+3102                                                                      000014
+1103                                                                      000015
+12Ausstattung und Nebenarbeiten                                           000016
+2103 0080              00000693000m3                                      000017
+25Schottertragschicht 0/32 liefern und einbauen                           000018
+26   Mineralgemisch liefern, lagenweise einbauen und verdichten.          000019
+3103                                                                      000020
+99                                                                   00003000021

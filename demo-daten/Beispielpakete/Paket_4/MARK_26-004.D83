@@ -1,0 +1,20 @@
+00           26-004                                                       000001
+01Deckenerneuerung Abschnitt 4            20.03.26                        000002
+02MARK                                                                    000003
+03Gemeinde Musterdorf                                                     000004
+1103                                                                      000005
+12Ausstattung und Nebenarbeiten                                           000006
+2103 0010              00000535000m                                       000007
+25Markierung demarkieren                                                  000008
+26   Vorhandene Markierung durch Fr„sen oder Strahlen restlos entfernen.  000009
+2103 0020              00000004000St                                      000010
+25Pfeilmarkierung Geradeaus, 5 m                                          000011
+26   Richtungspfeil nach RMS herstellen.                                  000012
+2103 0090              00000941000m                                       000013
+25Fahrstreifenbegrenzung 25 cm, Heiáplastik                               000014
+26   Durchgehende Linie herstellen, einschlieálich Vorvermessung.         000015
+2103 0130              00001479000m                                       000016
+25Leitlinie 15 cm, weiá, Farbe                                            000017
+26   Fahrbahnmarkierung als Leitlinie nach RMS herstellen, Typ II.        000018
+3103                                                                      000019
+99                                                                   00004000020

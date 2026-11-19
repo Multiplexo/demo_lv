@@ -1,0 +1,102 @@
+00           26-005                                                       000001
+01Deckenerneuerung Abschnitt 5            15.03.26                        000002
+02Deckenerneuerung Abschnitt 5                                            000003
+03Stadtwerke Musterstadt                                                  000004
+1101                                                                      000005
+12Baustelleneinrichtung und Verkehrssicherung                             000006
+2101 0010              00000001000psch                                    000007
+25Baustelle einrichten                                                    000008
+26   Baustelleneinrichtung fr s„mtliche Leistungen herstellen, vorhalten 000009
+26   und nach Abschluss r„umen.                                           000010
+2101 0020              00000318000m2                                      000011
+25Planum herstellen                                                       000012
+26   Planum profilgerecht herstellen und verdichten, Ev2 mindestens 45 MN/000013
+26   m2.                                                                  000014
+2101 0030              00000026000Wo                                      000015
+25Sanit„rcontainer vorhalten                                              000016
+26   WC-Container mit Waschgelegenheit vorhalten und reinigen.            000017
+2101 0040              00000001000psch                                    000018
+25Verkehrssicherung Arbeitsstelle krzerer Dauer                          000019
+26   Verkehrssicherung nach RSA 21 einrichten, vorhalten, umsetzen und r„u000020
+26   men.                                                                 000021
+2101 0050              00000052000d                                       000022
+25Transportable Lichtsignalanlage vorhalten                               000023
+26   Transp. LSA mit zwei Signalgebern, verkehrsabh„ngig gesteuert, vorhal000024
+26   ten.                                                                 000025
+2101 0060              00000030000Wo                                      000026
+25Baubro vorhalten                                                       000027
+26   Brocontainer mit Einrichtung, Heizung und Stromanschluss vorhalten. 000028
+2101 0070              00002058000m2                                      000029
+25Kampfmittelsondierung Fl„che                                            000030
+26   Fl„che vor Beginn der Erdarbeiten auf Kampfmittel sondieren.         000031
+3101                                                                      000032
+1102                                                                      000033
+12Fahrbahn                                                                000034
+2102 0010              00000319000m                                       000035
+25Bordstein Hochbord setzen                                               000036
+26   Bordsteine in Beton C20/25 mit Rckensttze setzen.                  000037
+2102 0020              00000024000St                                      000038
+25Schachtabdeckung regulieren                                             000039
+26   Vorhandene Schachtabdeckung an die neue H”he anpassen.               000040
+2102 0030              00000011000St                                      000041
+25Verkehrszeichen 274 aufstellen                                          000042
+26   Verkehrszeichen RA 2 mit Pfosten und Fundament aufstellen.           000043
+2102 0040              00000007000St                                      000044
+25Pfeilmarkierung Geradeaus, 5 m                                          000045
+26   Richtungspfeil nach RMS herstellen.                                  000046
+2102 0050              00002892000m                                       000047
+25Leitlinie 12 cm, weiá, Farbe                                            000048
+26   Fahrbahnmarkierung als Leitlinie nach RMS herstellen, Typ II.        000049
+2102 0060              00000920000m2                                      000050
+25Geotextil GRK 3 liefern                                                 000051
+26   Geotextil als Trenn- und Filterlage liefern.                         000052
+2102 0070              00000003000St                                      000053
+25Straáenbeleuchtung umsetzen                                             000054
+26   Mast mit Leuchte demontieren und an neuer Stelle aufbauen, Kabelarbei000055
+26   ten.                                                                 000056
+2102 0080              00000808000m                                       000057
+25Nahtband an Anschlussfugen aufbringen                                   000058
+26   Bitumenhaltiges Nahtband an N„hten und Anschlssen aufbringen.       000059
+2102 0090              00000688000m                                       000060
+25Schutzplanke demontieren                                                000061
+26   Vorhandene Schutzplanke einschlieálich Pfosten zurckbauen.          000062
+2102 0100              00000475000t                                       000063
+25Mischgut AC 11 liefern                                                  000064
+26   Asphaltmischgut ab Werk liefern, Temperatur nach TL Asphalt-StB.     000065
+3102                                                                      000066
+1103                                                                      000067
+12Ausstattung und Nebenarbeiten                                           000068
+2103 0010              00000130000m                                       000069
+25Kanalrohr DN 400 verlegen                                               000070
+26   Kanalrohr in offener Bauweise verlegen, einschlieálich Leitungsgraben000071
+26   .                                                                    000072
+2103 0020              00000435000m3                                      000073
+25Frostschutzmaterial liefern                                             000074
+26   Frostschutzmaterial 0/32 liefern und einbauen.                       000075
+2103 0030              00000798000t                                       000076
+25Fr„sgut verwerten                                                       000077
+26   Teerfreies Fr„sgut bernehmen und im Mischwerk verwerten.            000078
+2103 0040              00000398000t                                       000079
+25Boden entsorgen, Z 1.2                                                  000080
+26   Belasteten Boden laden, abfahren und zur zugelassenen Deponie verbrin000081
+26   gen.                                                                 000082
+2103 0050              00002852000m2                                      000083
+25Haftkleber auf Fr„sfl„che aufbringen                                    000084
+26   Anspritzen der gefr„sten Fl„che mit polymermodifizierter Emulsion.   000085
+2103 0060              00000012000St                                      000086
+25Hausanschlussleitung herstellen                                         000087
+26   Grundstcksanschluss DN 150 an Hauptkanal anschlieáen.               000088
+2103 0070              00000310000m                                       000089
+25Asphalt schneiden, Tiefe bis 10 cm                                      000090
+26   Asphalt mit Fugenschneider gerade und senkrecht schneiden.           000091
+2103 0080              00000157000m                                       000092
+25Fuge vergieáen, heiá verarbeitbar                                       000093
+26   Fugen zwischen Asphalt und Einbauten mit Fugenmasse vergieáen.       000094
+2103 0090              00000050000m                                       000095
+25Entw„sserungsrinne Schlitzrinne liefern                                 000096
+26   Entw„sserungsrinne Klasse D 400 liefern.                             000097
+2103 0100              00000740000m3                                      000098
+25Schottertragschicht 0/32 liefern und einbauen                           000099
+26   Mineralgemisch liefern, lagenweise einbauen und verdichten.          000100
+3103                                                                      000101
+99                                                                   00027000102

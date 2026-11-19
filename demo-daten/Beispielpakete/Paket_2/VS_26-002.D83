@@ -1,0 +1,19 @@
+00           26-002                                                       000001
+01Deckenerneuerung Abschnitt 2            20.03.26                        000002
+02VS                                                                      000003
+03Landesbetrieb Stra·enbau (Demo)                                         000004
+1101                                                                      000005
+12Baustelleneinrichtung und Verkehrssicherung                             000006
+2101 0040              00000044000d                                       000007
+25Transportable Lichtsignalanlage vorhalten                               000008
+26   Transp. LSA mit zwei Signalgebern, verkehrsabhÑngig gesteuert, vorhal000009
+26   ten.                                                                 000010
+2101 0050              00002575000Std                                     000011
+25Absperrschranke 2.0 m vorhalten                                         000012
+26   Absperrschranken mit Fu· und Warnleuchte vorhalten.                  000013
+2101 0070              00000001000psch                                    000014
+25Verkehrssicherung Arbeitsstelle kÅrzerer Dauer                          000015
+26   Verkehrssicherung nach RSA 21 einrichten, vorhalten, umsetzen und rÑu000016
+26   men.                                                                 000017
+3101                                                                      000018
+99                                                                   00003000019

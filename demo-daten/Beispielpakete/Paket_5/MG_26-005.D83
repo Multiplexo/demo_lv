@@ -1,0 +1,17 @@
+00           26-005                                                       000001
+01Deckenerneuerung Abschnitt 5            20.03.26                        000002
+02MG                                                                      000003
+03Stadtwerke Musterstadt                                                  000004
+1102                                                                      000005
+12Fahrbahn                                                                000006
+2102 0100              00000475000t                                       000007
+25Mischgut AC 11 liefern                                                  000008
+26   Asphaltmischgut ab Werk liefern, Temperatur nach TL Asphalt-StB.     000009
+3102                                                                      000010
+1103                                                                      000011
+12Ausstattung und Nebenarbeiten                                           000012
+2103 0030              00000798000t                                       000013
+25Fr„sgut verwerten                                                       000014
+26   Teerfreies Fr„sgut bernehmen und im Mischwerk verwerten.            000015
+3103                                                                      000016
+99                                                                   00002000017

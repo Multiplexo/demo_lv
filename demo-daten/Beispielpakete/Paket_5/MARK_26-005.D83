@@ -1,0 +1,14 @@
+00           26-005                                                       000001
+01Deckenerneuerung Abschnitt 5            20.03.26                        000002
+02MARK                                                                    000003
+03Stadtwerke Musterstadt                                                  000004
+1102                                                                      000005
+12Fahrbahn                                                                000006
+2102 0040              00000007000St                                      000007
+25Pfeilmarkierung Geradeaus, 5 m                                          000008
+26   Richtungspfeil nach RMS herstellen.                                  000009
+2102 0050              00002892000m                                       000010
+25Leitlinie 12 cm, weiá, Farbe                                            000011
+26   Fahrbahnmarkierung als Leitlinie nach RMS herstellen, Typ II.        000012
+3102                                                                      000013
+99                                                                   00002000014

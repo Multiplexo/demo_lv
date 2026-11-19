@@ -1,0 +1,14 @@
+00           26-003                                                       000001
+01Deckenerneuerung Abschnitt 3            20.03.26                        000002
+02MG                                                                      000003
+03Kreis Beispielland                                                      000004
+1102                                                                      000005
+12Fahrbahn                                                                000006
+2102 0060              00000357000t                                       000007
+25Fr„sgut verwerten                                                       000008
+26   Teerfreies Fr„sgut bernehmen und im Mischwerk verwerten.            000009
+2102 0080              00000948000t                                       000010
+25Mischgut AC 22 liefern                                                  000011
+26   Asphaltmischgut ab Werk liefern, Temperatur nach TL Asphalt-StB.     000012
+3102                                                                      000013
+99                                                                   00002000014

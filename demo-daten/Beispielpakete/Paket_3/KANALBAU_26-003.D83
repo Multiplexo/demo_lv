@@ -1,0 +1,15 @@
+00           26-003                                                       000001
+01Deckenerneuerung Abschnitt 3            20.03.26                        000002
+02KANALBAU                                                                000003
+03Kreis Beispielland                                                      000004
+1102                                                                      000005
+12Fahrbahn                                                                000006
+2102 0130              00000006000St                                      000007
+25Hausanschlussleitung herstellen                                         000008
+26   GrundstÅcksanschluss DN 150 an Hauptkanal anschlie·en.               000009
+2102 0140              00000109000m                                       000010
+25Kanalrohr DN 300 verlegen                                               000011
+26   Kanalrohr in offener Bauweise verlegen, einschlie·lich Leitungsgraben000012
+26   .                                                                    000013
+3102                                                                      000014
+99                                                                   00002000015

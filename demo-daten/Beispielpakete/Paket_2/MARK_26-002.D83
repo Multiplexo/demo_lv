@@ -1,0 +1,23 @@
+00           26-002                                                       000001
+01Deckenerneuerung Abschnitt 2            20.03.26                        000002
+02MARK                                                                    000003
+03Landesbetrieb Straáenbau (Demo)                                         000004
+1102                                                                      000005
+12Fahrbahn                                                                000006
+2102 0100              00000130000m2                                      000007
+25Sperrfl„che markieren, Heiáplastik                                      000008
+26   Sperrfl„chen in Schr„gstrichen herstellen.                           000009
+2102 0110              00000075000m                                       000010
+25Markierung demarkieren                                                  000011
+26   Vorhandene Markierung durch Fr„sen oder Strahlen restlos entfernen.  000012
+3102                                                                      000013
+1103                                                                      000014
+12Ausstattung und Nebenarbeiten                                           000015
+2103 0060              00000352000m                                       000016
+25Leitlinie 12 cm, weiá, Heiáplastik                                      000017
+26   Fahrbahnmarkierung als Leitlinie nach RMS herstellen, Typ II.        000018
+2103 0070              00000299000m                                       000019
+25Fahrstreifenbegrenzung 25 cm, Heiáplastik                               000020
+26   Durchgehende Linie herstellen, einschlieálich Vorvermessung.         000021
+3103                                                                      000022
+99                                                                   00004000023

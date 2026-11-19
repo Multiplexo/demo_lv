@@ -1,0 +1,105 @@
+00           26-100                                                       000001
+01Ausbau Beispielweg (Test)               15.03.26                        000002
+02Ausbau Beispielweg (Test)                                               000003
+03Stadt Musterstadt                                                       000004
+1101                                                                      000005
+12Baustelleneinrichtung und Verkehrssicherung                             000006
+2101 0010              00000001000psch                                    000007
+25Baustelle einrichten                                                    000008
+26   Baustelleneinrichtung fÅr sÑmtliche Leistungen herstellen, vorhalten 000009
+26   und nach Abschluss rÑumen.                                           000010
+2101 0020              00000047000m                                       000011
+25Bordstein Hochbord setzen                                               000012
+26   Bordsteine in Beton C20/25 mit RÅckenstÅtze setzen.                  000013
+2101 0030              00000018000d                                       000014
+25Transportable Lichtsignalanlage vorhalten                               000015
+26   Transp. LSA mit zwei Signalgebern, verkehrsabhÑngig gesteuert, vorhal000016
+26   ten.                                                                 000017
+2101 0040              00000022000Wo                                      000018
+25BaubÅro vorhalten                                                       000019
+26   BÅrocontainer mit Einrichtung, Heizung und Stromanschluss vorhalten. 000020
+2101 0050              00000018000Wo                                      000021
+25SanitÑrcontainer vorhalten                                              000022
+26   WC-Container mit Waschgelegenheit vorhalten und reinigen.            000023
+2101 0060              00003616000Std                                     000024
+25Absperrschranke 2.0 m vorhalten                                         000025
+26   Absperrschranken mit Fu· und Warnleuchte vorhalten.                  000026
+2101 0070              00000001000psch                                    000027
+25Umleitungsbeschilderung aufstellen                                      000028
+26   Umleitungsbeschilderung nach verkehrsrechtlicher Anordnung aufstellen000029
+26    und vorhalten.                                                      000030
+3101                                                                      000031
+1102                                                                      000032
+12Fahrbahn                                                                000033
+2102 0010              00000001000psch                                    000034
+25Baustelle rÑumen                                                        000035
+26   GerÑte, Anlagen und Einrichtungen von der Baustelle entfernen, FlÑche000036
+26   n in den ursprÅnglichen Zustand versetzen.                           000037
+2102 0020              00000266000m2                                      000038
+25Betonpflaster 10 cm liefern                                             000039
+26   Betonsteinpflaster grau liefern, frei Baustelle.                     000040
+2102 0030              00000006000St                                      000041
+25Baumschutz herstellen                                                   000042
+26   Stammschutz mit Bohlenummantelung herstellen und vorhalten.          000043
+2102 0040              00000311000m3                                      000044
+25Frostschutzmaterial liefern                                             000045
+26   Frostschutzmaterial 0/32 liefern und einbauen.                       000046
+2102 0050              00000172000m2                                      000047
+25Pflaster verlegen, FischgrÑt                                            000048
+26   Pflastersteine in Bettung verlegen, einschlÑmmen und abrÅtteln.      000049
+2102 0060              00000017000St                                      000050
+25Probe entnehmen, Bohrkern                                               000051
+26   Probenahme und PrÅfung durch anerkannte PrÅfstelle.                  000052
+2102 0070              00000199000t                                       000053
+25Boden entsorgen, DK I                                                   000054
+26   Belasteten Boden laden, abfahren und zur zugelassenen Deponie verbrin000055
+26   gen.                                                                 000056
+2102 0080              00000003000St                                      000057
+25Stra·enbeleuchtung umsetzen                                             000058
+26   Mast mit Leuchte demontieren und an neuer Stelle aufbauen, Kabelarbei000059
+26   ten.                                                                 000060
+2102 0090              00000019000St                                      000061
+25Pfeilmarkierung Links, 5 m                                              000062
+26   Richtungspfeil nach RMS herstellen.                                  000063
+2102 0100              00000562000m                                       000064
+25Nahtband an Anschlussfugen aufbringen                                   000065
+26   Bitumenhaltiges Nahtband an NÑhten und AnschlÅssen aufbringen.       000066
+3102                                                                      000067
+1103                                                                      000068
+12Ausstattung und Nebenarbeiten                                           000069
+2103 0010              00000081000St                                      000070
+25Leitpfosten aufstellen                                                  000071
+26   Leitpfosten aus Kunststoff mit Reflektor aufstellen.                 000072
+2103 0020              00000402000m                                       000073
+25Schutzplanke Stahlschutzwand herstellen                                 000074
+26   Fahrzeug-RÅckhaltesystem nach Systemzulassung aufstellen.            000075
+2103 0030              00000373000m                                       000076
+25Leitlinie 12 cm, wei·, Kaltplastik                                      000077
+26   Fahrbahnmarkierung als Leitlinie nach RMS herstellen, Typ II.        000078
+2103 0040              00000243000m                                       000079
+25Asphalt schneiden, Tiefe bis 10 cm                                      000080
+26   Asphalt mit Fugenschneider gerade und senkrecht schneiden.           000081
+2103 0050              00000127000m                                       000082
+25EntwÑsserungsrinne Schlitzrinne liefern                                 000083
+26   EntwÑsserungsrinne Klasse D 400 liefern.                             000084
+2103 0060              00002864000m2                                      000085
+25Bitumenemulsion C60 BP1-S anspritzen                                    000086
+26   Unterlage mit Bitumenemulsion gleichmÑ·ig anspritzen, 250 g/m2.      000087
+2103 0070              00000227000m                                       000088
+25Kanalrohr DN 400 verlegen                                               000089
+26   Kanalrohr in offener Bauweise verlegen, einschlie·lich Leitungsgraben000090
+26   .                                                                    000091
+2103 0080              00001553000m2                                      000092
+25Geotextil GRK 3 liefern                                                 000093
+26   Geotextil als Trenn- und Filterlage liefern.                         000094
+2103 0090              00000007000St                                      000095
+25Baum fÑllen, Stammdurchmesser 80 cm                                     000096
+26   BaumfÑllung einschlie·lich Wurzelstock roden und entsorgen.          000097
+2103 0100              00000346000m                                       000098
+25Markierung demarkieren                                                  000099
+26   Vorhandene Markierung durch FrÑsen oder Strahlen restlos entfernen.  000100
+2103 0110              00001243000m2                                      000101
+25Haftkleber auf FrÑsflÑche aufbringen                                    000102
+26   Anspritzen der gefrÑsten FlÑche mit polymermodifizierter Emulsion.   000103
+3103                                                                      000104
+99                                                                   00028000105

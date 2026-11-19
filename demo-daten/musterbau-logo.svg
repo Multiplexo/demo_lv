@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80">
+<rect x="4" y="14" width="52" height="52" rx="10" fill="#1F4E79"/>
+<path d="M16 54 L30 26 L44 54" fill="none" stroke="#E8772E" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="70" y="50" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1F4E79" letter-spacing="1">MUSTERBAU</text>
+<text x="72" y="68" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5D6B7E" letter-spacing="3">GMBH · DEMO</text>
+</svg>

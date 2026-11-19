@@ -1,0 +1,20 @@
+00           26-003                                                       000001
+01Deckenerneuerung Abschnitt 3            20.03.26                        000002
+02MARK                                                                    000003
+03Kreis Beispielland                                                      000004
+1102                                                                      000005
+12Fahrbahn                                                                000006
+2102 0120              00000792000m                                       000007
+25Leitlinie 12 cm, weiá, Kaltplastik                                      000008
+26   Fahrbahnmarkierung als Leitlinie nach RMS herstellen, Typ II.        000009
+3102                                                                      000010
+1103                                                                      000011
+12Ausstattung und Nebenarbeiten                                           000012
+2103 0030              00000160000m2                                      000013
+25Sperrfl„che markieren, Heiáplastik                                      000014
+26   Sperrfl„chen in Schr„gstrichen herstellen.                           000015
+2103 0080              00000481000m                                       000016
+25Markierung demarkieren                                                  000017
+26   Vorhandene Markierung durch Fr„sen oder Strahlen restlos entfernen.  000018
+3103                                                                      000019
+99                                                                   00003000020

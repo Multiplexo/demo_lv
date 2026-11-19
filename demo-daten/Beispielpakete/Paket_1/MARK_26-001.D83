@@ -1,0 +1,17 @@
+00           26-001                                                       000001
+01Deckenerneuerung Abschnitt 1            20.03.26                        000002
+02MARK                                                                    000003
+03Stadt Musterstadt                                                       000004
+1102                                                                      000005
+12Fahrbahn                                                                000006
+2102 0030              00001937000m                                       000007
+25Leitlinie 15 cm, weiá, Farbe                                            000008
+26   Fahrbahnmarkierung als Leitlinie nach RMS herstellen, Typ II.        000009
+2102 0060              00000070000m2                                      000010
+25Sperrfl„che markieren, Heiáplastik                                      000011
+26   Sperrfl„chen in Schr„gstrichen herstellen.                           000012
+2102 0070              00001277000m                                       000013
+25Fahrstreifenbegrenzung 25 cm, Kaltplastik                               000014
+26   Durchgehende Linie herstellen, einschlieálich Vorvermessung.         000015
+3102                                                                      000016
+99                                                                   00003000017

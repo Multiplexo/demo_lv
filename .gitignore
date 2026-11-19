@@ -1,0 +1,7 @@
+dist/
+__pycache__/
+.DS_Store
+# Echte Kundenpakete enthalten Lieferantenlisten mit Kontaktdaten: nicht in dieses Demo-Repository.
+# Nur der erfundene Demo-Kunde wird eingecheckt (siehe README, „Echte Kunden“).
+kunden/*
+!kunden/demo/
